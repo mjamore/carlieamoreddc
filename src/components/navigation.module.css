@@ -1,0 +1,16 @@
+.navigation {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-item {
+  padding: 0 10px;
+}
+
+.navigation-item-link {
+  text-decoration: none;
+  padding: 10px;
+}

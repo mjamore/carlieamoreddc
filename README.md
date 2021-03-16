@@ -46,3 +46,31 @@
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
     - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+
+Site requirements:
+
+URL:
+- carlieamoreholisticdds.com
+- carlieamoredds.com
+- broadmoorholistidentistry.com
+
+Pages:
+- Homepage
+- Services
+    - Healthy Start
+    - Holistic/Biological Dentistry
+    - TMJ Treatment
+- About Dr. Julie Babcock
+- Meet the Team
+- Unique First Visit
+- Patient Education
+- Contact Us
+
+Features
+- Ability to submit a contact form
+- Book online?
+- New Patient Exam Form
+
+Influences:
+- https://thevibrantmarket.com/
