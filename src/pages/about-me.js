@@ -1,12 +1,11 @@
 import * as React from 'react';
-import Navigation from '../components/navigation';
+import PageLayout from '../components/pageLayout';
 
 const AboutMePage = () => {
   return (
-    <div>
-      <Navigation />
+    <PageLayout>
       <h1>About Me</h1>
-    </div>
+    </PageLayout>
   )
 }
 

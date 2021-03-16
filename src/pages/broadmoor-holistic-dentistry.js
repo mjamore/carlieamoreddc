@@ -1,12 +1,11 @@
 import * as React from 'react';
-import Navigation from '../components/navigation';
+import PageLayout from '../components/pageLayout';
 
 const BroadmoorHolisticDentistryPage = () => {
   return (
-    <div>
-      <Navigation />
+    <PageLayout>
       <h1>Broadmoor Holistic Dentistry</h1>
-    </div>
+    </PageLayout>
   )
 }
 
