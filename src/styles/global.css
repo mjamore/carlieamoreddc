@@ -7,7 +7,7 @@ body {
 }
 
 /* Style all font awesome icons */
-a.fa {
+i.fa {
   padding: 10px;
   margin: 0 5px;
   font-size: 35px;
