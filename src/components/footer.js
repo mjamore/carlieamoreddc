@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as globalStyles from './globalStyles.module.css';
 
 const Footer = () => {
   return (

@@ -1,7 +1,9 @@
 @import './typography.css';
+@import './colors.css';
 
 body {
   font-family: 'Open Sans Regular', Arial;
+  background-color: var(--background-color);
 }
 
 /* Style all font awesome icons */
@@ -13,7 +15,7 @@ a.fa {
   text-align: center;
   text-decoration: none;
   border-radius: 10%;
-  color: white;
+  color: var(--white-color);
 }
 
 /* Add a hover effect if you want */
@@ -25,23 +27,23 @@ a.fa {
 
 /* Facebook */
 .fa-facebook {
-  background: #3B5998;
+  background: var(--facebook-color);
 }
 
 /* Twitter */
 .fa-twitter {
-  background: #55ACEE;
+  background: var(--twitter-color);
 }
 
 .fa-instagram {
-  background: #125688;
+  background: var(--instagram-color);
 }
 
 .fa-snapchat {
-  background: #fffc00;
+  background:var(--snapchat-color);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .fa-linkedin {
-  background: #007bb5;
+  background: var(--linkedin-color);
 }

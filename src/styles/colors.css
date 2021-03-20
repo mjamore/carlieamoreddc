@@ -1,0 +1,14 @@
+:root {
+  /* site colors */
+  --background-color: aliceblue;
+
+  /* standard colors */
+  --white-color: white;
+
+  /* social media */
+  --facebook-color: #3B5998;
+  --twitter-color: #55ACEE;
+  --instagram-color: #125688;
+  --snapchat-color: #fffc00;
+  --linkedin-color: #007bb5;
+}
