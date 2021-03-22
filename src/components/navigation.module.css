@@ -16,7 +16,7 @@
   padding: 10px;
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: var(--font-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -24,8 +24,7 @@
 }
 
 .navigation-item-link:hover {
-  background-color: #ddd;
-  color: black;
+  color: var(--black-color);
 }
 
 nav ul:focus {

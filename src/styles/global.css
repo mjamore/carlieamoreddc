@@ -8,4 +8,5 @@ body {
   background-color: var(--background-color);
   max-width: 1200px;
   margin: 0 auto;
+  color: var(--font-color);
 }
