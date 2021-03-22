@@ -18,6 +18,7 @@ const Footer = () => {
       <a href='https://www.linkedin.com/' target='_blank' rel='noreferrer' aria-label="LinkedIn link to Carlie Amore\'s profile page">
         <i className={'fa fa-linkedin'}></i>
       </a>
+      <p>© 2021 Carlie Amore, DDS | All Rights Reserved.</p>
     </footer>
   )
 }

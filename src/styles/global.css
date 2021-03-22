@@ -2,9 +2,10 @@
 @import './colors.css';
 @import './css-reset.css';
 @import './font-awesome.css';
-@import './hamburger-menu.css';
 
 body {
   font-family: 'Open Sans Regular', Arial;
   background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 0 auto;
 }

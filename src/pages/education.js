@@ -1,12 +1,12 @@
 import * as React from 'react';
 import PageLayout from '../components/pageLayout';
 
-const AboutMePage = () => {
+const EducationPage = () => {
   return (
     <PageLayout>
-      <h1>About Me</h1>
+      <h1>Education</h1>
     </PageLayout>
   )
 }
 
-export default AboutMePage
+export default EducationPage
