@@ -14,8 +14,28 @@
   border-radius: 5px;
 }
 
-.carlieImage {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.section {
+  padding: 40px;
+}
+
+.section1 {
+  background-color: var(--white-color);
+}
+
+.section2 {
+  background-color: aliceblue;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  font-size: 20px;
+}
+
+.section-title h3 {
+  display: inline-block;
+  margin: 0 10px;
 }
