@@ -1,0 +1,6 @@
+.testimonial {
+  background-color: var(--card-title-background-color);
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+}

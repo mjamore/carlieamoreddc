@@ -57,7 +57,7 @@ const ServicesProvided = () => {
 
   const services = servicesProvidedData.map((service, index) => {
     return (
-      <Card cardTitle={service.name} cardBody={service.description} />
+      <Card key={index} cardTitle={service.name} cardBody={service.description} />
     );
   });
 
