@@ -23,7 +23,7 @@ const IndexPage = () => {
       <div className={globalStyles.centered}>
         <StaticImage
           className={globalStyles.imgShadow}
-          src='../images/carlie.webp'
+          src='../images/carlie/carlie.webp'
           alt='Dr. Carlie Amore, DDS'
           placeholder='blurred'
           // width={200}
