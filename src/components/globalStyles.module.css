@@ -17,3 +17,7 @@
 .img-shadow {
   box-shadow: 5px 5px 5px var(--gray-color);
 }
+
+.page-heading {
+  text-align: center;
+}

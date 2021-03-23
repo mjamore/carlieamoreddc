@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from './card';
+import FlexboxDiv from './flexboxDiv';
 
 const servicesProvidedData = [
   {
@@ -55,18 +57,14 @@ const ServicesProvided = () => {
 
   const services = servicesProvidedData.map((service, index) => {
     return (
-      <div>
-        <h3>{service.name}</h3>
-        <p>{service.description}</p>
-      </div>
+      <Card cardTitle={service.name} cardBody={service.description} />
     );
   });
 
   return (
-    <div>
-      <h2>Services Provided</h2>
+    <FlexboxDiv>
       {services}
-    </div>
+    </FlexboxDiv>
   );
 };
 

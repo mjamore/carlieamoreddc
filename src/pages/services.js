@@ -1,12 +1,16 @@
 import * as React from 'react';
 import PageLayout from '../components/pageLayout';
 import ServicesProvided from '../components/servicesProvided';
+import ContentContainer from '../components/contentContainer';
+import * as globalStyles from '../components/globalStyles.module.css';
 
 const ServicesPages = () => {
   return (
     <PageLayout>
-      <h1>My Services</h1>
-      <ServicesProvided />
+      <ContentContainer>
+        <h1 className={globalStyles.pageHeading}>Specialty Services</h1>
+        <ServicesProvided />
+      </ContentContainer>
     </PageLayout>
   )
 }
