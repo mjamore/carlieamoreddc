@@ -2,10 +2,12 @@
   /* site colors */
   --background-color: aliceblue;
   --font-color: #505050;
+  --footer-background-color: #d8ecfd;
 
   /* standard colors */
   --white-color: white;
   --black-color: black;
+  --gray-color: #808080;
 
   /* social media */
   --facebook-color: #3B5998;

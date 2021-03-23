@@ -7,12 +7,11 @@
 .tagline {
   position: absolute;
   text-align: center;
-  color: white;
-  background: black;
+  color: var(--white-color);
+  background: rgba(0, 0, 0, .5);
   font-size: 30px;
   padding: 30px;
   border-radius: 5px;
-  opacity: .5;
 }
 
 .carlieImage {

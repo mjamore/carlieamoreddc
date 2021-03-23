@@ -1,8 +1,9 @@
 import * as React from 'react';
+import * as styles from './footer.module.css';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footerContainer}>
       <a href='https://www.facebook.com/carlie.amore' target='_blank' rel='noreferrer' aria-label="Facebook link to Carlie Amore\'s profile page">
         <i className={'fa fa-facebook'}></i>
       </a>
@@ -18,7 +19,7 @@ const Footer = () => {
       <a href='https://www.linkedin.com/' target='_blank' rel='noreferrer' aria-label="LinkedIn link to Carlie Amore\'s profile page">
         <i className={'fa fa-linkedin'}></i>
       </a>
-      <p>© 2021 Carlie Amore, DDS | All Rights Reserved.</p>
+      <p className={styles.copyrightStatement}>© 2021 Carlie Amore, DDS | All Rights Reserved.</p>
     </footer>
   )
 }
