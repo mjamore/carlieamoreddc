@@ -42,8 +42,11 @@ const Testimonials = () => {
   });
 
   return (
-    <div>
-      {testimonialItems}
+    <div className={globalStyles.centered}>
+      <h3>Patient Testimonials</h3>
+      <div className={styles.testimonialsContainer}>
+        {testimonialItems}
+      </div>
     </div>
   );
 }

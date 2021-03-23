@@ -1,3 +1,8 @@
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+}
+
 .testimonial {
   background-color: var(--white-color);
   border: 1px solid var(--card-border-color);
