@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './card';
-import FlexboxDiv from './flexboxDiv';
+import FlexboxDiv from './containers/flexboxDiv';
 
 const servicesProvidedData = [
   {

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import PageLayout from '../components/pageLayout';
-import * as globalStyles from '../components/globalStyles.module.css';
+import PageLayout from '../components/layout/pageLayout';
 import ServicesProvided from '../components/servicesProvided';
 import Testimonials from '../components/testimontials';
+import * as globalStyles from '../components/globalStyles.module.css';
 
 const BroadmoorHolisticDentistryPage = () => {
   return (
