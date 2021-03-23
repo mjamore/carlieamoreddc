@@ -19,7 +19,7 @@ const IndexPage = () => {
         </div>
         <p className={styles.tagline}>Doctor of Dental Surgery<br />Specializing in Holistic Dentistry</p>
       </div>
-      <div className={globalStyles.centered}>
+      <div className={`${globalStyles.centered} ${globalStyles.spacedSection}`}>
         <StaticImage
           className={globalStyles.imgShadow}
           src='../images/carlie/carlie.webp'
