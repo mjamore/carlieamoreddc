@@ -7,7 +7,7 @@ import * as globalStyles from '../components/globalStyles.module.css';
 const BroadmoorHolisticDentistryPage = () => {
   return (
     <PageLayout>
-      <h1>Broadmoor Holistic Dentistry</h1>
+      <h1 className={globalStyles.pageHeading}>Broadmoor Holistic Dentistry</h1>
       <h2>Choosing a dentist for you &amp; your family is an important decision that should not be taken lightly</h2>
       <h2>Why We are Different</h2>
       <p>Our medical world is rapidly changing into a very fast paced, high production model that runs patients through the practice as quickly as possible. The more patients that the doctor can see, the more money he or she can make. The focus is on treating symptoms with quick fixes. There is no time, no desire, and no knowledge to go beyond symptom treatment and determine the cause.  If a cause is never addressed, the problem will surely return. We have chosen a different path. You will notice from the moment you walk in that this practice will be different.</p>

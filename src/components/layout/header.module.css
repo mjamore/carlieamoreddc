@@ -3,4 +3,5 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 20px 0;
+  background-color: var(--white-color);
 }
