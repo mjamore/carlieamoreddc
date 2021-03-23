@@ -1,7 +1,7 @@
 import * as React from 'react';
-import PageLayout from '../components/pageLayout';
+import PageLayout from '../components/layout/pageLayout';
+import ContentContainer from '../components/containers/contentContainer';
 import ServicesProvided from '../components/servicesProvided';
-import ContentContainer from '../components/contentContainer';
 import * as globalStyles from '../components/globalStyles.module.css';
 
 const ServicesPages = () => {
