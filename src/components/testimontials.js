@@ -28,13 +28,14 @@ const Testimonials = () => {
       <div key={index} className={styles.testimonial}>
         <div className={`${globalStyles.width100} ${globalStyles.centered}`}>
           <StaticImage
-            className={globalStyles.circularImage}
+            className={`${globalStyles.circularImage} ${styles.image}`}
             src='../images/testimonials/3.jpg'
             alt='User testimonial image'
             placeholder='blurred'
           />
         </div>
         <h4 className={globalStyles.centered}>{testimonial.name}</h4>
+        <hr />
         <p>{testimonial.text}</p>
       </div>
     );
