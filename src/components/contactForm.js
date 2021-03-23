@@ -10,6 +10,9 @@ const ContactForm = () => {
       <label className={styles.label} for='emailAddress'>Email address:
         <input className={styles.input} type='email' name='emailAddress' id='emailAddress'></input>
       </label>
+      <label className={styles.label} for='phone'>Phone Number:
+        <input className={styles.input} type='number' name='phone' id='phone'></input>
+      </label>
       <label className={styles.label} for='comments'>Comment:
         <textarea className={styles.textarea} name='comments' id='comments'></textarea>
       </label>
