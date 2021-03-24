@@ -51,3 +51,6 @@ Influences:
 - Add manifest for offline support - npm install gatsby-plugin-offline
 - check Lighthouse performance
 - add google analytics
+- Update logo
+- Fix mobile navigation menu
+- Add favicon
