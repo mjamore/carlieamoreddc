@@ -12,6 +12,7 @@ module.exports = {
                 background_color: `#f7f0eb`,
                 theme_color: `#a2466c`,
                 display: `standalone`,
+                cache_busting_mode: 'none',
                 icon: `src/images/favicons/favicon.png`,
                 icons: [
                     {
@@ -29,8 +30,8 @@ module.exports = {
                         src: `/src/images/favicons/apple-touch-icon.png`,
                         sizes: `180x180`,
                         type: `image/png`,
-                      },
-                  ]
+                    },
+                ]
             },
         },
         {
