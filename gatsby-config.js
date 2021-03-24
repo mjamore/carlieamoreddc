@@ -14,6 +14,7 @@ module.exports = {
                 theme_color: `#a2466c`,
                 display: `standalone`,
                 cache_busting_mode: 'none',
+                prefer_related_applications: false,
                 icon: `src/images/favicons/favicon.png`,
                 icons: [
                     {
