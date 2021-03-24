@@ -1,18 +1,19 @@
 :root {
+  /* standard colors */
+  --aliceblue-color: aliceblue;
+  --white-color: white;
+  --black-color: black;
+  --gray-color: #808080;
+  --light-gray-color: #eaeaea;
+  --red-color: #ad0000;
+
   /* site colors */
-  --background-color: aliceblue;
+  --background-color: var(var(--white-color));
   --font-color: #505050;
-  --footer-background-color: #d8ecfd;
 
   /* card */
   --card-title-background-color: #e8e8e8;
   --card-border-color: #e4e4e4;
-
-  /* standard colors */
-  --white-color: white;
-  --black-color: black;
-  --gray-color: #808080;
-  --red-color: #ad0000;
 
   /* social media */
   --facebook-color: #3B5998;
