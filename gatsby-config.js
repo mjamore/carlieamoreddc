@@ -37,7 +37,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-offline`,
             options: {
-                precachePages: [`/`, `/education/, /services/, /broadmoor-holistic-dentistry/, /contact-me/`],
+                precachePages: [`/`, `/education/`, `/services/`, `/broadmoor-holistic-dentistry/`, `/contact-me/`],
             },
           }
     ]
