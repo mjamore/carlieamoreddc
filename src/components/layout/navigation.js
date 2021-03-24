@@ -28,7 +28,7 @@ const Navigation = () => {
         <Link to='/contact-me/' className={styles.navigationItemLink}>Contact Me</Link>
       </li>
       <li className={styles.navigationItem}>
-        <button className={`${styles.icon}`} onClick={toggleIsResponsive}>
+        <button className={`${styles.icon}`} aria-label='navigation hamburger menu button' onClick={toggleIsResponsive}>
           <i className={'fa fa-bars'}></i>
         </button>
       </li>
