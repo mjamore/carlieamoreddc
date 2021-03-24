@@ -3,6 +3,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
+        `gatsby-plugin-offline`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -33,12 +34,6 @@ module.exports = {
                     },
                 ]
             },
-        },
-        {
-            resolve: `gatsby-plugin-offline`,
-            options: {
-                precachePages: [`/`, `/education/`, `/services/`, `/broadmoor-holistic-dentistry/`, `/contact-me/`],
-            },
-          }
+        }
     ]
 }
