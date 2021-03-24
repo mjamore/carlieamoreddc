@@ -44,13 +44,14 @@ Features
 
 Influences:
 - https://thevibrantmarket.com/
+- https://www.rejuvdentist.com/
+- http://www.laholisticdentistry.com/
+- https://www.zaghimd.com/
 
 
 ## To-Do:
-- add SEO metadata to each page
-- Add manifest for offline support - npm install gatsby-plugin-offline
-- check Lighthouse performance
-- add google analytics
+- Customize SEO metadata to each page
+- Figure out why offline support isn't working
+- Add google analytics
 - Update logo
 - Fix mobile navigation menu
-- Add favicon

@@ -3,3 +3,9 @@
   src: url('../fonts/OpenSans-Regular.ttf');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/OpenSans-Light.ttf');
+  font-display: swap;
+}
