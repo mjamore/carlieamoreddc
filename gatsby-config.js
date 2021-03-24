@@ -15,5 +15,11 @@ module.exports = {
                 icon: `src/images/favicon.png`,
             },
         },
+        {
+            resolve: `gatsby-plugin-offline`,
+            options: {
+                precachePages: [`/`, `/education/, /services/, /broadmoor-holistic-dentistry/, /contact-me/`],
+            },
+          }
     ]
 }
