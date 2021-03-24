@@ -12,7 +12,25 @@ module.exports = {
                 background_color: `#f7f0eb`,
                 theme_color: `#a2466c`,
                 display: `standalone`,
-                icon: `src/images/favicon.png`,
+                icon: `src/images/favicons/favicon.png`,
+                icons: [
+                    {
+                      src: `/src/images/favicons/android-chrome-192x192.png`,
+                      sizes: `192x192`,
+                      type: `image/png`,
+                      purpose: `any maskable`
+                    },
+                    {
+                      src: `/src/images/favicons/android-chrome-512x512.png`,
+                      sizes: `512x512`,
+                      type: `image/png`,
+                    },
+                    {
+                        src: `/src/images/favicons/apple-touch-icon.png`,
+                        sizes: `180x180`,
+                        type: `image/png`,
+                      },
+                  ]
             },
         },
         {
