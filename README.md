@@ -74,3 +74,9 @@ Features
 
 Influences:
 - https://thevibrantmarket.com/
+
+
+To-Do:
+- add SEO metadata to each page
+- Add manifest for offline support - npm install gatsby-plugin-offline
+- check Lighthouse performance
