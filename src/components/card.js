@@ -6,6 +6,7 @@ const Card = (props) => {
     <div className={styles.card}>
       <div className={styles.cardTitle}>
         <h3>{props.cardTitle}</h3>
+        <hr />
       </div>
       <div className={styles.cardBody}>
         <p>{props.cardBody}</p>
