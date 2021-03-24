@@ -1,9 +1,8 @@
 .form {
   max-width: 600px;
   padding: 20px;
-  background-color: var(--font-color);
-  color: var(--white-color);
-  border-radius: 10px;
+  background-color: var(--white-color);
+  border: 1px solid var(--card-border-color);
   margin: 20px auto;
 }
 
@@ -20,4 +19,14 @@
 
 .textarea {
   height: 100px;
+}
+
+.required-asterisk {
+  color: var(--red-color);
+  font-size: 12px;
+}
+
+.form-error {
+  color: var(--red-color);
+  font-size: 14px;
 }
