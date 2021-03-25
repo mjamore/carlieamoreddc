@@ -1,8 +1,15 @@
 import * as React from 'react';
-import {useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'gatsby';
 import navigationLinks from '../../data/navigationLinks';
-import * as styles from './headerNavigation.module.css';
+import {
+  navigation,
+  navigationItem,
+  navigationItemLink,
+  icon,
+  topnav,
+  responsive,
+} from './headerNavigation.module.css';
 
 const HeaderNavigation = () => {
   const [isResponsive, setIsResponsive] = useState(0);
@@ -11,24 +18,27 @@ const HeaderNavigation = () => {
     setIsResponsive(!isResponsive);
   };
 
-  const navigationItems = navigationLinks.map((navigationItem, index) => {
-    return (
-      <li key={index} className={styles.navigationItem}>
-        <Link to={navigationItem.href} className={styles.navigationItemLink}>{navigationItem.text}</Link>
-      </li>
-    );
-  });
+  const navigationItems = navigationLinks.map((navigationLink) => (
+    <li key={navigationLink.href} className={navigationItem}>
+      <Link
+        to={navigationLink.href}
+        className={navigationItemLink}
+      >
+        {navigationLink.text}
+      </Link>
+    </li>
+  ));
 
   return (
-    <ul className={`${styles.navigation} ${isResponsive ? `${styles.topnav} ${styles.responsive}` : `${styles.topnav}`}`}>
+    <ul className={`${navigation} ${isResponsive ? `${topnav} ${responsive}` : `${topnav}`}`}>
       {navigationItems}
-      <li className={styles.navigationItem}>
-        <button className={`${styles.icon}`} aria-label='navigation hamburger menu button' onClick={toggleIsResponsive}>
-          <i className={'fa fa-bars'}></i>
+      <li className={navigationItem}>
+        <button className={`${icon}`} type='button' aria-label='navigation hamburger menu button' onClick={toggleIsResponsive}>
+          <i className='fa fa-bars' />
         </button>
       </li>
     </ul>
-  )
-}
+  );
+};
 
 export default HeaderNavigation;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import navigationLinks from '../../data/navigationLinks';
-import { navigationItemLink } from './footerNavigation.module.css';
+import { navigation, navigationItemLink } from './footerNavigation.module.css';
 
 const FooterNavigation = () => {
   const navigationItems = navigationLinks.map((navigationItem) => (
@@ -16,7 +16,7 @@ const FooterNavigation = () => {
   ));
 
   return (
-    <ul>
+    <ul className={navigation}>
       {navigationItems}
     </ul>
   );

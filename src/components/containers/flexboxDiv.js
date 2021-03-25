@@ -1,8 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { flexboxDiv } from './flexboxDiv.module.css';
 
 const FlexboxDiv = ({ children }) => (
-  <div>
+  <div className={flexboxDiv}>
     {children}
   </div>
 );
