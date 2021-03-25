@@ -5,18 +5,18 @@
   border: 1px solid var(--card-border-color);
 }
 
-.card-title {
+.card-title-style {
   text-align: center;
   padding-top: 20px;
   background-color: aliceblue;
   
 }
 
-h3 {
+.card-title-heading {
   margin-bottom: 20px;
 }
 
-.card-body {
+.card-body-style {
   padding: 20px;
   text-align: justify;
 }

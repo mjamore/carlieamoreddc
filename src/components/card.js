@@ -1,18 +1,30 @@
 import * as React from 'react';
-import * as styles from './card.module.css';
+import PropTypes from 'prop-types';
+import {
+  card,
+  cardTitleStyle,
+  cardTitleHeading,
+  cardBodyStyle,
+} from './card.module.css';
 
 const Card = (props) => {
+  const { cardTitle, cardBody } = props;
   return (
-    <div className={styles.card}>
-      <div className={styles.cardTitle}>
-        <h3>{props.cardTitle}</h3>
+    <div className={card}>
+      <div className={cardTitleStyle}>
+        <h3 className={cardTitleHeading}>{cardTitle}</h3>
         <hr />
       </div>
-      <div className={styles.cardBody}>
-        <p>{props.cardBody}</p>
+      <div className={cardBodyStyle}>
+        <p>{cardBody}</p>
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  cardTitle: PropTypes.node.isRequired,
+  cardBody: PropTypes.node.isRequired,
 };
 
 export default Card;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import FooterNavigation from './footerNavigation';
 import ContactForm from '../contactForm';
-import { socialMediaLinks, copyrightStatement } from './footer.module.css';
+import { footer, socialMediaLinks, copyrightStatement } from './footer.module.css';
 
 const Footer = () => (
-  <footer>
+  <footer className={footer}>
     <FooterNavigation />
     <div className={socialMediaLinks}>
       <a href='https://www.facebook.com/carlie.amore' target='_blank' rel='noreferrer' aria-label="Facebook link to Carlie Amore\'s profile page">
