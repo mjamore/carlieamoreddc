@@ -18,10 +18,6 @@ const navigationLinks = [
   {
     'text': 'Testimonials',
     'href': '/testimonials/'
-  },
-  {
-    'text': 'Contact Me',
-    'href': '/contact-me/'
   }
 ];
 

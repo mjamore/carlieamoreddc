@@ -1,4 +1,4 @@
-.footer-container {
+footer {
   background-color: var(--aliceblue-color);
   text-align: center;
   padding: 50px 0;
@@ -6,6 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.social-media-links {
+  align-self: flex-end;
 }
 
 .copyright-statement {

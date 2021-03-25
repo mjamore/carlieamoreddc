@@ -16,21 +16,22 @@ const ContactForm = () => {
   const { register, handleSubmit, errors } = useForm();
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit(submitForm)}>
+    <form onSubmit={handleSubmit(submitForm)}>
       <h4>Let's Get in Touch</h4>
-      <label className={styles.label} htmlFor='name'>Name <span className={styles.requiredAsterisk}>*</span>
-        <input className={styles.input} type='text' name='name' id='name' ref={register({ required: true })} />
+      <hr />
+      <label htmlFor='name'>Name <span>*</span>
+        <input type='text' name='name' id='name' ref={register({ required: true })} />
         {errors.name && <RequiredFieldErrorMessage />}
       </label>
-      <label className={styles.label} htmlFor='emailAddress'>Email address <span className={styles.requiredAsterisk}>*</span>
-        <input className={styles.input} type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
+      <label htmlFor='emailAddress'>Email address <span>*</span>
+        <input type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
         {errors.emailAddress && <RequiredFieldErrorMessage />}
       </label>
-      <label className={styles.label} htmlFor='phone'>Phone Number
-        <input className={styles.input} type='tel' name='phone' id='phone' minlength='10' maxlength='12' ref={register} />
-      </label>
-      <label className={styles.label} htmlFor='message'>Message <span className={styles.requiredAsterisk}>*</span>
-        <textarea className={styles.textarea} name='message' id='message' ref={register({ required: true })} />
+      {/* <label htmlFor='phone'>Phone Number
+        <input type='tel' name='phone' id='phone' minlength='10' maxlength='12' ref={register} />
+      </label> */}
+      <label htmlFor='message'>Message <span>*</span>
+        <textarea name='message' id='message' ref={register({ required: true })} />
         {errors.message && <RequiredFieldErrorMessage />}
       </label>
       <input type='submit' value='Submit' />

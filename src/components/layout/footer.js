@@ -5,9 +5,9 @@ import * as styles from './footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footerContainer}>
+    <footer>
       <FooterNavigation />
-      <div>
+      <div className={styles.socialMediaLinks}>
         <a href='https://www.facebook.com/carlie.amore' target='_blank' rel='noreferrer' aria-label="Facebook link to Carlie Amore\'s profile page">
           <i className={'fa fa-facebook'}></i>
         </a>
