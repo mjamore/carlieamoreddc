@@ -1,12 +1,12 @@
 import * as React from 'react';
 import Logo from './logo';
-import Navigation from './headerNavigation';
+import HeaderNavigation from './headerNavigation';
 import { header } from './header.module.css';
 
 const Header = () => (
-  <header>
+  <header className={header}>
     <Logo />
-    <Navigation />
+    <HeaderNavigation />
   </header>
 );
 
