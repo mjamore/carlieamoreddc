@@ -31,6 +31,7 @@ textarea {
 label span {
   color: var(--red-color);
   font-size: 12px;
+  margin-left: 3px;
 }
 
 .form-error {
