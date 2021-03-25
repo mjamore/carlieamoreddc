@@ -1,0 +1,19 @@
+.navigation {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  list-style: none;
+  text-align: left;
+}
+
+.navigation-item-link {
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navigation-item-link:hover {
+  color: var(--black-color);
+}

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import * as styles from './header.module.css';
-import Navigation from './navigation';
 import Logo from './logo';
+import Navigation from './headerNavigation';
+import * as styles from './header.module.css';
 
 const Header = () => {
   return (

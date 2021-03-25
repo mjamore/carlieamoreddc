@@ -2,9 +2,9 @@ import * as React from 'react';
 import {useState} from 'react';
 import { Link } from 'gatsby';
 import navigationLinks from '../../data/navigationLinks';
-import * as styles from './navigation.module.css';
+import * as styles from './headerNavigation.module.css';
 
-const Navigation = () => {
+const HeaderNavigation = () => {
   const [isResponsive, setIsResponsive] = useState(0);
 
   const toggleIsResponsive = () => {
@@ -31,4 +31,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default HeaderNavigation;
