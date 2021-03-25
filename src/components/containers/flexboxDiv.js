@@ -1,12 +1,14 @@
 import * as React from 'react';
-import * as styles from './flexboxDiv.module.css'
+import PropTypes from 'prop-types';
 
-const FlexboxDiv = ({ children }) => {
-  return (
-    <div className={styles.flexbox}>
-      {children}
-    </div>
-  );
+const FlexboxDiv = ({ children }) => (
+  <div>
+    {children}
+  </div>
+);
+
+FlexboxDiv.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default FlexboxDiv;
