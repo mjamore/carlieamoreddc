@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Logo from './logo';
 import Navigation from './headerNavigation';
-import * as styles from './header.module.css';
+import { header } from './header.module.css';
 
 const Header = () => (
-  <header className={styles.header}>
+  <header>
     <Logo />
     <Navigation />
   </header>
