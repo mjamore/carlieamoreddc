@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.testimonial {
+.testimonial-container {
   background-color: var(--white-color);
   border: 1px solid var(--card-border-color);
   width: 250px;
@@ -13,10 +13,4 @@
 
 .image {
   box-shadow: 2px 2px 5px var(--gray-color);
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

@@ -16,6 +16,7 @@ module.exports = {
     'react/react-in-jsx-scope': 2,
     'jsx-quotes': [2, 'prefer-single'],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'max-len': 'off',
   },
   ecmaFeatures: {
     jsx: true,
