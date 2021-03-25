@@ -3,7 +3,6 @@
   margin: 20px;
   background-color: var(--white-color);
   border: 1px solid var(--card-border-color);
-  box-shadow: 0px 0px 5px var(--gray-color);
 }
 
 .card-title {
@@ -20,6 +19,4 @@ h3 {
 .card-body {
   padding: 20px;
   text-align: justify;
-  border-bottom-left-radius: var(--card-border-radius);
-  border-bottom-right-radius: var(--card-border-radius);
 }

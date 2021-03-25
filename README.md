@@ -47,6 +47,8 @@ Influences:
 - https://www.rejuvdentist.com/
 - http://www.laholisticdentistry.com/
 - https://www.zaghimd.com/
+- https://www.enlightendentalnola.com/
+- https://drjabanmoore.com/
 
 
 ## To-Do:
