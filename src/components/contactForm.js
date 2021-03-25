@@ -17,6 +17,7 @@ const ContactForm = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(submitForm)}>
+      <h4>Let's Get in Touch</h4>
       <label className={styles.label} htmlFor='name'>Name <span className={styles.requiredAsterisk}>*</span>
         <input className={styles.input} type='text' name='name' id='name' ref={register({ required: true })} />
         {errors.name && <RequiredFieldErrorMessage />}
@@ -26,7 +27,7 @@ const ContactForm = () => {
         {errors.emailAddress && <RequiredFieldErrorMessage />}
       </label>
       <label className={styles.label} htmlFor='phone'>Phone Number
-        <input className={styles.input} type='number' name='phone' id='phone' ref={register} />
+        <input className={styles.input} type='tel' name='phone' id='phone' minlength='10' maxlength='12' ref={register} />
       </label>
       <label className={styles.label} htmlFor='message'>Message <span className={styles.requiredAsterisk}>*</span>
         <textarea className={styles.textarea} name='message' id='message' ref={register({ required: true })} />
