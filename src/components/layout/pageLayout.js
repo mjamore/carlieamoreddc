@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import HeaderNavigation from './headerNavigation';
 import Header from './header';
 import Footer from './footer';
 
@@ -10,6 +11,7 @@ const PageLayout = ({ children }) => (
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' media='all' />
       <html lang='en' />
     </Helmet>
+    <HeaderNavigation />
     <Header />
     {children}
     <Footer />

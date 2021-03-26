@@ -16,7 +16,7 @@ const HeaderNavigation = () => {
   ));
 
   return (
-    <Menu className='my-menu' right disableAutoFocus>
+    <Menu right disableAutoFocus>
       {navigationItems}
     </Menu>
   );
