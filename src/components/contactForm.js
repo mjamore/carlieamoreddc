@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import * as styles from './contactForm.module.css';
 
@@ -10,11 +11,12 @@ const RequiredFieldErrorMessage = () => (
   <span className={styles.formError}>This field is required</span>
 );
 
-const ContactForm = () => {
+const ContactForm = (props) => {
   const { register, handleSubmit, errors } = useForm();
+  const { className } = props;
 
   return (
-    <form onSubmit={handleSubmit(submitForm)}>
+    <form className={className} onSubmit={handleSubmit(submitForm)}>
       <h4>Let&apos;s Get in Touch</h4>
       <hr />
       <label htmlFor='name'>
@@ -29,9 +31,6 @@ const ContactForm = () => {
         <input type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
         {errors.emailAddress && <RequiredFieldErrorMessage />}
       </label>
-      {/* <label htmlFor='phone'>Phone Number
-        <input type='tel' name='phone' id='phone' minlength='10' maxlength='12' ref={register} />
-      </label> */}
       <label htmlFor='message'>
         Message
         <span>*</span>
@@ -41,6 +40,14 @@ const ContactForm = () => {
       <input type='submit' value='Submit' />
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  className: PropTypes.string,
+};
+
+ContactForm.defaultProps = {
+  className: null,
 };
 
 export default ContactForm;
