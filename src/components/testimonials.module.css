@@ -1,6 +1,5 @@
 .testimonial-container {
   background-color: var(--white-color);
-  border: 1px solid var(--card-border-color);
   max-width: var(--testimonial-max-width);
   margin: 0 auto;
   padding: 20px;

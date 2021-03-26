@@ -6,6 +6,7 @@ import {
   width100,
   centered,
   circularImage,
+  imgShadow,
   swiperContainer,
 } from './globalStyles.module.css';
 import {
@@ -23,7 +24,7 @@ SwiperCore.use([Autoplay, Pagination, A11y]);
 const Testimonials = () => {
   const testimonialItems = testimonialData.map((testimonial) => (
     <SwiperSlide key={testimonialData.name}>
-      <div className={testimonialContainer}>
+      <div className={`${testimonialContainer} ${imgShadow}`}>
         <div className={`${width100} ${centered}`}>
           <StaticImage
             className={`${circularImage} ${image}`}

@@ -26,3 +26,8 @@ hr {
 span.swiper-pagination-bullet-active {
   background-color: var(--blue-green-color);
 }
+
+/* gatsby-plugin-image */
+.gatsby-image-wrapper img {
+  border: none;
+}
