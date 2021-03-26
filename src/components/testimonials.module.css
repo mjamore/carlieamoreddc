@@ -1,16 +1,17 @@
-.testimonials-container {
-  display: flex;
-  justify-content: center;
-}
-
 .testimonial-container {
   background-color: var(--white-color);
   border: 1px solid var(--card-border-color);
-  width: 250px;
-  margin: 20px;
+  max-width: var(--testimonial-max-width);
+  margin: 0 auto;
   padding: 20px;
 }
 
 .image {
   box-shadow: 2px 2px 5px var(--gray-color);
+}
+
+@media screen and (max-width: 500px) {
+  .testimonial-container {
+    margin: 0 20px;
+  }
 }

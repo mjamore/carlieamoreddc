@@ -2,8 +2,16 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import testimonialData from '../data/testimonials';
-import { width100, centered, circularImage } from './globalStyles.module.css';
-import { testimonialsContainer, testimonialContainer, image, swiperContainer } from './testimonials.module.css';
+import {
+  width100,
+  centered,
+  circularImage,
+  swiperContainer,
+} from './globalStyles.module.css';
+import {
+  testimonialContainer,
+  image,
+} from './testimonials.module.css';
 
 // Swiperjs
 import SwiperCore, { Autoplay, Pagination, A11y } from 'swiper';
@@ -34,21 +42,14 @@ const Testimonials = () => {
 
   return (
     <Swiper
-      className={swiperContainer}
-      id='main'
-      spaceBetween={50}
+      className={`${swiperContainer} ${centered}`}
       slidesPerView={1}
+      loop
       pagination={{ clickable: true }}
-      // autoplay={{ delay: 5000 }}
+      autoplay={{ delay: 5000 }}
     >
       {testimonialItems}
     </Swiper>
-    // <div className={centered}>
-    //   <h3>Patient Testimonials</h3>
-    //   <div className={testimonialsContainer}>
-    //     {testimonialItems}
-    //   </div>
-    // </div>
   );
 };
 

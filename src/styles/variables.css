@@ -1,4 +1,7 @@
 :root {
   /* global */
   --max-page-width: 1200px;
+
+  /* testimonial swiper */
+  --testimonial-max-width: 500px;
 }

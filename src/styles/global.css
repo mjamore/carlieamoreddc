@@ -4,7 +4,6 @@
 @import './css-reset.css';
 @import './font-awesome.css';
 @import './hamburger-nav.css';
-@import './swiper-js.css';
 
 body {
   font-family: 'Open Sans Light', Arial;
@@ -17,4 +16,13 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* swiperjs */
+.swiper-container-horizontal > .swiper-pagination.swiper-pagination-bullets {
+  bottom: -30px;
+}
+
+span.swiper-pagination-bullet-active {
+  background-color: var(--blue-green-color);
 }
