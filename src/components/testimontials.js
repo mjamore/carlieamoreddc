@@ -16,6 +16,7 @@ const Testimonials = () => {
         />
       </div>
       <h4 className={centered}>{testimonial.name}</h4>
+      <h5>{testimonial.service}</h5>
       <hr />
       <p>{testimonial.text}</p>
     </div>
