@@ -1,0 +1,4 @@
+.swiper-container {
+  margin: 50px 0;
+  max-width: var(--max-page-width);
+}
