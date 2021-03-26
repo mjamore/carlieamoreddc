@@ -1,43 +1,24 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { Link } from 'gatsby';
+import { slide as Menu } from 'react-burger-menu';
 import navigationLinks from '../../data/navigationLinks';
-import {
-  navigation,
-  navigationItem,
-  navigationItemLink,
-  icon,
-  topnav,
-  responsive,
-} from './headerNavigation.module.css';
+import { navigationItemLink } from './headerNavigation.module.css';
 
 const HeaderNavigation = () => {
-  const [isResponsive, setIsResponsive] = useState(0);
-
-  const toggleIsResponsive = () => {
-    setIsResponsive(!isResponsive);
-  };
-
   const navigationItems = navigationLinks.map((navigationLink) => (
-    <li key={navigationLink.href} className={navigationItem}>
-      <Link
-        to={navigationLink.href}
-        className={navigationItemLink}
-      >
-        {navigationLink.text}
-      </Link>
-    </li>
+    <Link
+      key={navigationLink.href}
+      to={navigationLink.href}
+      className={navigationItemLink}
+    >
+      {navigationLink.text}
+    </Link>
   ));
 
   return (
-    <ul className={`${navigation} ${isResponsive ? `${topnav} ${responsive}` : `${topnav}`}`}>
+    <Menu className='my-menu' right disableAutoFocus>
       {navigationItems}
-      <li className={navigationItem}>
-        <button className={`${icon}`} type='button' aria-label='navigation hamburger menu button' onClick={toggleIsResponsive}>
-          <i className='fa fa-bars' />
-        </button>
-      </li>
-    </ul>
+    </Menu>
   );
 };
 

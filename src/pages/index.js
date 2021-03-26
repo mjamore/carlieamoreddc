@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/pageLayout';
+import HeaderNavigation from '../components/layout/headerNavigation';
+import HamburgerMenu from '../components/layout/hamburgerMenu';
 import aboutMeContent from '../data/aboutMeContent';
 import {
   width100,
@@ -44,6 +46,7 @@ const IndexPage = () => {
           { name: 'keywords', content: 'holistic dentist, holistic dentistry, dentist in Overland Park' },
         ]}
       />
+      <HeaderNavigation />
       <PageLayout>
         <div className={heroImageContainer}>
           <div className={width100}>
