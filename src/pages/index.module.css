@@ -16,21 +16,18 @@
 
 .section {
   padding: 40px;
+}
+
+.about-me-paragraph {
   max-width: var(--max-page-width);
-  margin: 0 auto;
-}
-
-.section1 {
-  background-color: var(--white-color);
-}
-
-.section2 {
-  background-color: var(--light-gray-color);
+  margin: 20px auto 50px;
 }
 
 .section-title {
   text-align: center;
+  text-transform: uppercase;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .section-title span {
@@ -40,4 +37,30 @@
 .section-title h3 {
   display: inline-block;
   margin: 0 10px;
+}
+
+.paragraph-container {
+  background-color: var(--blue-green-color);
+  display: flex;
+  margin: 50px 0;
+}
+
+.jagged-border {
+  background:
+        linear-gradient(-135deg, var(--blue-green-color) 10px, transparent 0) 0 10px,
+        linear-gradient(135deg, var(--blue-green-color) 10px, #fff 0) 0 10px;
+  background-color: var(--blue-green-color);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 20px 20px;
+}
+
+.rounded-border {
+  background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(155,222,209,0) 0) 55px 0 var(--blue-green-color);
+    background-size: 110px 50px;
+    background-repeat: repeat-x;
+}
+
+.top-shadow {
+  box-shadow: 0px -5px 5px -5px var(--gray-color)
 }

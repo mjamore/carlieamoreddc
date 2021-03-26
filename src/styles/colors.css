@@ -8,8 +8,10 @@
   --red-color: #ad0000;
 
   /* site colors */
-  --background-color: var(var(--white-color));
+  --background-color: var(--white-color);
   --font-color: #505050;
+  --purple-color: #BF92BC;
+  --blue-green-color: #9BDED1;
 
   /* card */
   --card-title-background-color: #e8e8e8;
