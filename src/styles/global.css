@@ -5,11 +5,15 @@
 @import './font-awesome.css';
 @import './hamburger-nav.css';
 
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Open Sans Light', Arial;
   background-color: var(--background-color);
   margin: 0 auto;
   color: var(--font-color);
+  overflow-x: hidden;
 }
 
 hr {
