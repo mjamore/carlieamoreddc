@@ -1,14 +1,20 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import * as styles from './contactForm.module.css';
+import {
+  form,
+  formError,
+  label,
+  input,
+  textarea,
+} from './contactForm.module.css';
 
 const submitForm = (formData) => {
   console.log('formData: ', formData);
 };
 
 const RequiredFieldErrorMessage = () => (
-  <span className={styles.formError}>This field is required</span>
+  <span className={formError}>This field is required</span>
 );
 
 const ContactForm = (props) => {
@@ -16,25 +22,25 @@ const ContactForm = (props) => {
   const { className } = props;
 
   return (
-    <form className={className} onSubmit={handleSubmit(submitForm)}>
+    <form className={`${form} ${className}`} onSubmit={handleSubmit(submitForm)}>
       <h4>Let&apos;s Get in Touch</h4>
       <hr />
-      <label htmlFor='name'>
+      <label className={label} htmlFor='name'>
         Name
         <span>*</span>
-        <input type='text' name='name' id='name' ref={register({ required: true })} />
+        <input className={input} type='text' name='name' id='name' ref={register({ required: true })} />
         {errors.name && <RequiredFieldErrorMessage />}
       </label>
-      <label htmlFor='emailAddress'>
+      <label className={label} htmlFor='emailAddress'>
         Email address
         <span>*</span>
-        <input type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
+        <input className={input} type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
         {errors.emailAddress && <RequiredFieldErrorMessage />}
       </label>
-      <label htmlFor='message'>
+      <label className={label} htmlFor='message'>
         Message
         <span>*</span>
-        <textarea name='message' id='message' ref={register({ required: true })} />
+        <textarea className={textarea} name='message' id='message' ref={register({ required: true })} />
         {errors.message && <RequiredFieldErrorMessage />}
       </label>
       <input type='submit' value='Submit' />

@@ -17,3 +17,9 @@
 .navigation-item-link:hover {
   color: var(--black-color);
 }
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    margin: 50px 0;
+  }
+}
