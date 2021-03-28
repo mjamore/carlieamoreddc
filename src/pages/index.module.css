@@ -64,3 +64,10 @@
 .top-shadow {
   box-shadow: 0px -5px 5px -5px var(--gray-color)
 }
+
+@media screen and (max-width: 600px) {
+  .tagline {
+    font-size: 18px;
+    padding: 18px;
+  }
+}
