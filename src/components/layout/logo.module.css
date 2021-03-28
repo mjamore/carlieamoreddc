@@ -1,4 +1,9 @@
 .logo-link {
   text-decoration: none;
   color: var(--black-color);
+  display: flex;
+}
+
+.logo-link h2 {
+  margin-left: 10px;
 }

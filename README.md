@@ -82,4 +82,8 @@ Influences:
 - Fix mobile navigation menu
 - convert to Sass/try Tailwind CSS
 - Create the Meet the Team section
+- When contact form is submitted, update the ContactForm UI
 
+Heart tooth logos:
+- https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn2.vectorstock.com%2Fi%2F1000x1000%2F29%2F26%2Fcreative-teeth-heart-inside-logo-vector-22372926.jpg&imgrefurl=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fcreative-teeth-heart-inside-logo-vector-22372926&tbnid=dZggBgS5TD0cGM&vet=12ahUKEwi465uwpdLvAhWGT98KHUAFBekQMygIegUIARDYAQ..i&docid=jSD1itavTYTigM&w=1000&h=780&q=heart%20tooth&ved=2ahUKEwi465uwpdLvAhWGT98KHUAFBekQMygIegUIARDYAQ
+- https://pixlr.com/e/#editor
