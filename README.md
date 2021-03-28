@@ -23,16 +23,17 @@ In order to send emails to Carlie when the user submits the contact form on the 
 2.  ```shell
     netlify dev
     ```
-You should now be able to invoke the function by hitting http://localhost:{PORT_NUMBER_SPECIFIED_IN_OUTPUT_FROM_NETLIFY_DEV_COMMAND}/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
 
-3.  ```shell
+3. You should now be able to invoke the function by hitting http://localhost:{PORT_NUMBER_SPECIFIED_IN_OUTPUT_FROM_NETLIFY_DEV_COMMAND}/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
+
+4.  ```shell
     netlify deploy --prod
     ```
 
-4. You should now be able to invoke the function by hitting https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
+5. You should now be able to invoke the function by hitting https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
 
-5. The following are ways to test/debug the Nelify function:
-    - You can see the response body in the browser when you hit the endpoint from step 4.
+6. The following are ways to test/debug the Nelify function:
+    - You can see the response body in the browser when you hit the endpoint from step 5.
     - You can see the function logs at https://app.netlify.com/sites/carlieamoredds/functions/sendEmail
     - The email should show up in the Mailgun user interface dashboard.
     - You should recieve the email at the EMAIL_T0_ADDRESS defined in step 1
@@ -80,4 +81,5 @@ Influences:
 - Update logo
 - Fix mobile navigation menu
 - convert to Sass/try Tailwind CSS
+- Create the Meet the Team section
 
