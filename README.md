@@ -79,7 +79,7 @@ Influences:
 - Figure out why offline support isn't working
 - Add google analytics
 - Update logo
-- Fix mobile navigation menu
+- Fix contact form in navigation menu
 - convert to Sass/try Tailwind CSS
 - Create the Meet the Team section
 - When contact form is submitted, update the ContactForm UI
