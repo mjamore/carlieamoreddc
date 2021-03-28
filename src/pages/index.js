@@ -18,6 +18,7 @@ import {
   sectionTitle,
   aboutMeParagraph,
 } from './index.module.css';
+import './stars.sass';
 
 const IndexPage = () => {
   const AboutMeSection = aboutMeContent.map((aboutMeSection, index) => {
@@ -57,6 +58,9 @@ const IndexPage = () => {
           </div>
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           <p className={tagline}>Doctor of Dental Surgery<br />Specializing in Holistic Dentistry</p>
+          <div id='stars' />
+          <div id='stars2' />
+          <div id='stars3' />
         </div>
         <div className={`${centered} ${spacedSection}`}>
           <StaticImage

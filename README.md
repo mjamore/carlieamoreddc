@@ -66,6 +66,7 @@ Features
 - New Patient Exam Form
 
 Influences:
+- https://www.babcockdentistry.com/
 - https://thevibrantmarket.com/
 - https://www.rejuvdentist.com/
 - http://www.laholisticdentistry.com/
