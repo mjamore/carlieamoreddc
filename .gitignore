@@ -3,3 +3,7 @@ node_modules/
 public
 
 .DS_store
+# Local Netlify folder
+.netlify
+
+.env

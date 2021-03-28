@@ -5,7 +5,7 @@ This is the source code for Carlie Amore's dentistry website:
 - https://carlieamoredds.netlify.app/
 - carlieamoredds.com
 
-## Run Locally:
+## Run Gatsby Website Locally:
 
 1.  ```shell
     npm install
@@ -14,6 +14,21 @@ This is the source code for Carlie Amore's dentistry website:
 2. ```shell
     npm start
     ```
+
+## Workflow for Developing/Deploying/Testing the Netlify Serverless Function:
+In order to send emails to Carlie when the user submits the contact form on the website, this application contains a serverless function that is deployed through Netlify, located in `netlify/functions/sendEmail.js`.
+
+1.  Make sure you have a .env file setup at the root of this project that contains an entry for `MAILGUN_API_KEY` and `EMAIL_T0_ADDRESS`. The MAILGUN_API_KEY value can be retrieved from https://app.mailgun.com/app/account/security/api_keys.
+
+3.  ```shell
+    netlify dev
+    ```
+You should now be able to invoke the function by hitting http://localhost:{PORT_NUMBER_SPECIFIED_IN_OUTPUT_FROM_NETLIFY_DEV_COMMAND}/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
+
+3.  ```shell
+    netlify deploy --prod
+    ```
+You should now be able to invoke the function by hitting https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser. You should recieve the email at the EMAIL_T0_ADDRESS defined in step 1 and the email should show in the Mailgun user interface dashboard.
 
 ## Deployment:
 Netlify is used as a continuous build/deployment server, as well as for hosting the site.  The site is automatically built each time the `main` branch is pushed.
@@ -57,4 +72,5 @@ Influences:
 - Add google analytics
 - Update logo
 - Fix mobile navigation menu
-- convert to Sass
+- convert to Sass/try Tailwind CSS
+
