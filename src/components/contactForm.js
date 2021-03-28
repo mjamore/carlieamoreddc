@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import {
   form,
   formError,
@@ -11,6 +13,18 @@ import {
 
 const submitForm = (formData) => {
   console.log('formData: ', formData);
+
+  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
+
+  axios.get(emailUrl)
+    .then((response) => {
+      // handle success
+      console.log('success response: ', response);
+    })
+    .catch((error) => {
+      // handle error
+      console.log('error response: ', error);
+    });
 };
 
 const RequiredFieldErrorMessage = () => (

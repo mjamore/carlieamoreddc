@@ -57,9 +57,16 @@ exports.handler = (event, context, callback) => {
       },
     };
 
+    const headers = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET',
+    };
+
     // return the response object
     callback(null, {
       statusCode: 200,
+      headers,
       body: JSON.stringify(responseBody),
     });
 
