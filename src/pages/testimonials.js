@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
+import PageHeading from '../components/pageHeading';
 import Testimonials from '../components/testimontials';
-import { pageHeading } from '../components/globalStyles.module.css';
 
 const TestimonialsPage = () => (
   <div>
@@ -14,7 +14,7 @@ const TestimonialsPage = () => (
       ]}
     />
     <PageLayout>
-      <h1 className={pageHeading}>Patient Testimonials</h1>
+      <PageHeading headingText='Patient Testimonials' />
       <Testimonials />
     </PageLayout>
   </div>
