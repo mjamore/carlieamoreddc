@@ -1,18 +1,8 @@
 /* eslint-disable import/order */
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import Card from './tailwind/card';
 import testimonialData from '../data/testimonials';
-import {
-  width100,
-  centered,
-  circularImage,
-  imgShadow,
-  swiperContainer,
-} from './globalStyles.module.css';
-import {
-  testimonialContainer,
-  image,
-} from './testimonials.module.css';
 
 // Swiperjs
 import SwiperCore, { Autoplay, Pagination, A11y } from 'swiper';
@@ -24,26 +14,25 @@ SwiperCore.use([Autoplay, Pagination, A11y]);
 const Testimonials = () => {
   const testimonialItems = testimonialData.map((testimonial) => (
     <SwiperSlide key={testimonialData.name}>
-      <div className={`${testimonialContainer} ${imgShadow}`}>
-        <div className={`${width100} ${centered}`}>
-          <StaticImage
-            className={`${circularImage} ${image}`}
-            src='../images/testimonials/3.jpg'
-            alt='User testimonial image'
-            placeholder='blurred'
-          />
-        </div>
-        <h4 className={centered}>{testimonial.name}</h4>
-        <h5>{testimonial.service}</h5>
-        <hr />
-        <p>{testimonial.text}</p>
-      </div>
+      <Card
+        heading={testimonial.name}
+        subHeading={testimonial.service}
+        description={testimonial.text}
+        maxWidth='max-w-md'
+      >
+        <StaticImage
+          className='my-3 rounded-full shadow-circular-img'
+          src='../images/testimonials/3.jpg'
+          alt='User testimonial image'
+          placeholder='blurred'
+        />
+      </Card>
     </SwiperSlide>
   ));
 
   return (
     <Swiper
-      className={`${swiperContainer} ${centered}`}
+      className='max-w-lg my-12 overflow-hidden text-center'
       slidesPerView={1}
       loop
       pagination={{ clickable: true }}
