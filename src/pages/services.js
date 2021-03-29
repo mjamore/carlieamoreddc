@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
 import ServicesProvided from '../components/servicesProvided';
-import { pageHeading } from '../components/globalStyles.module.css';
+import PageHeading from '../components/pageHeading';
 
 const ServicesPages = () => (
   <div>
@@ -15,7 +15,7 @@ const ServicesPages = () => (
     />
     <PageLayout>
       <div className='m-12'>
-        <h1 className={pageHeading}>Specialty Services</h1>
+        <PageHeading headingText='Specialty Services' />
         <ServicesProvided />
       </div>
     </PageLayout>
