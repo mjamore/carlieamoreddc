@@ -1,7 +1,7 @@
 /* eslint-disable import/order */
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import Card from './tailwind/card';
+import Card from './card';
 import testimonialData from '../data/testimonials';
 
 // Swiperjs
