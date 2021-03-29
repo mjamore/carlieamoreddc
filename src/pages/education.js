@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
-import { pageHeading } from '../components/globalStyles.module.css';
+import PageHeading from '../components/pageHeading';
 
 const EducationPage = () => (
   <div>
@@ -13,7 +13,7 @@ const EducationPage = () => (
       ]}
     />
     <PageLayout>
-      <h1 className={pageHeading}>Education</h1>
+      <PageHeading headingText='Education' />
     </PageLayout>
   </div>
 );
