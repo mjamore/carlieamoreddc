@@ -1,9 +1,0 @@
-.jagged-border {
-  background:
-        linear-gradient(-135deg, var(--blue-green-color) 10px, transparent 0) 0 10px,
-        linear-gradient(135deg, var(--blue-green-color) 10px, #fff 0) 0 10px;
-  background-color: var(--blue-green-color);
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 20px 20px;
-}

@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         hr: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))',
+        'jagged-image': 'linear-gradient(-135deg, #9bded1 10px, transparent 0), linear-gradient(135deg, #9bded1 10px, #fff 0)',
+      },
+      backgroundSize: {
+        'jagged-size': '20px 20px',
       },
       boxShadow: {
         DEFAULT: '0px 0px 5px 2px #808080',

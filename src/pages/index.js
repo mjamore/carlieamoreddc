@@ -3,12 +3,14 @@ import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/pageLayout';
 import aboutMeContent from '../data/aboutMeContent';
-import { jaggedBorder } from './index.module.css';
 import '../styles/stars.sass';
 
 const IndexPage = () => {
   const AboutMeSection = aboutMeContent.map((aboutMeSection, index) => {
-    const sectionClasses = index % 2 === 0 ? '' : `${jaggedBorder} shadow-top`;
+    let sectionClasses = '';
+    if (index % 2 !== 0) {
+      sectionClasses += 'bg-green bg-jagged-image bg-jagged-size bg-left-bottom bg-repeat-x shadow-top';
+    }
 
     return (
       <div key={aboutMeSection.title} className={`p-10 ${sectionClasses}`}>
