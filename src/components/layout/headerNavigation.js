@@ -18,7 +18,7 @@ const HeaderNavigation = () => {
   return (
     <Menu right disableAutoFocus>
       {navigationItems}
-      <ContactForm className='my-8' />
+      <ContactForm className='my-8 w-full' />
     </Menu>
   );
 };
