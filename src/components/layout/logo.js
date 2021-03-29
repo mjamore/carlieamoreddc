@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { logoLink } from './logo.module.css';
 
 const Logo = () => (
-  <Link to='/' className={logoLink}>
+  <Link to='/' className='flex no-underline text-black'>
     <StaticImage
       src='../../images/logos/heart-tooth.png'
       alt='Heart tooth logo'
       placeholder='blurred'
       width={40}
     />
-    <h2>Dr. Carlie Amore, DDS</h2>
+    <h2 className='ml-3 text-2xl'>Dr. Carlie Amore, DDS</h2>
   </Link>
 );
 
