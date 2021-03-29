@@ -1,41 +1,40 @@
 /* Style all font awesome icons */
 i.fa {
-  padding: 10px;
-  margin: 0 5px;
-  font-size: 35px;
-  width: 55px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10%;
-  color: var(--white-color);
+  @apply p-2;
+  @apply mx-1;
+  @apply text-4xl;
+  @apply w-14;
+  @apply h-14;
+  @apply text-center;
+  @apply no-underline;
+  @apply rounded-md;
+  @apply text-white;
 }
 
 /* Add a hover effect if you want */
 .fa:hover {
-  opacity: 0.7;
+  @apply opacity-70;
 }
-
-/* Set a specific color for each brand */
 
 /* Facebook */
 .fa-facebook {
-  background: var(--facebook-color);
+  @apply bg-facebook-color;
 }
 
 /* Twitter */
 .fa-twitter {
-  background: var(--twitter-color);
+  @apply bg-twitter-color;
 }
 
 .fa-instagram {
-  background: var(--instagram-color);
+  @apply bg-instagram-color;
 }
 
 .fa-snapchat {
-  background:var(--snapchat-color);
+  @apply bg-snapchat-color;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .fa-linkedin {
-  background: var(--linkedin-color);
+  @apply bg-linkedin-color;
 }
