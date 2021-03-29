@@ -3,15 +3,13 @@ import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
 import ContactForm from '../contactForm';
 import navigationLinks from '../../data/navigationLinks';
-import { spacedSection } from '../globalStyles.module.css';
-import { navigationItemLink } from './headerNavigation.module.css';
 
 const HeaderNavigation = () => {
   const navigationItems = navigationLinks.map((navigationLink) => (
     <Link
       key={navigationLink.href}
       to={navigationLink.href}
-      className={navigationItemLink}
+      className='block hover:text-black no-underline p-3 text-base text-font-color text-left w-full'
     >
       {navigationLink.text}
     </Link>
@@ -20,7 +18,7 @@ const HeaderNavigation = () => {
   return (
     <Menu right disableAutoFocus>
       {navigationItems}
-      <ContactForm className={spacedSection} />
+      <ContactForm className='my-8' />
     </Menu>
   );
 };

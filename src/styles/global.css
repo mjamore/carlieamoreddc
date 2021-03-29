@@ -10,7 +10,7 @@
 @tailwind utilities;
 
 html {
-  overflow-x: hidden;
+  @apply overflow-x-hidden;
 }
 
 body {
@@ -30,6 +30,10 @@ hr {
 /* swiperjs */
 span.swiper-pagination-bullet-active {
   background-color: var(--blue-green-color);
+}
+
+nav.bm-item-list {
+  @apply p-0;
 }
 
 /* gatsby-plugin-image */

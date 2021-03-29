@@ -34,7 +34,7 @@ const ContactForm = (props) => {
   const { className } = props;
 
   return (
-    <form className={`bg-gray-100 border border-gray-200 max-w-xs p-5 text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
+    <form className={`bg-gray-100 border border-gray-200 max-w-xs p-5 text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
       <h4>Let&apos;s Get in Touch</h4>
       <hr />
       <label className={labelClasses} htmlFor='name'>
