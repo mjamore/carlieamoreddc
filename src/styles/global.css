@@ -8,34 +8,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html,
+body {
   @apply overflow-x-hidden;
 }
 
 body {
   @apply text-font-color;
-  font-family: 'Open Sans Light', Arial;
-  background-color: var(--background-color);
-  margin: 0 auto;
-  overflow-x: hidden;
+  @apply font-site-font-family;
 }
 
 hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  @apply border-0;
+  @apply h-px;
+  @apply bg-hr;
 }
 
 /* swiperjs */
 span.swiper-pagination-bullet-active {
-  background-color: var(--blue-green-color);
-}
-
-nav.bm-item-list {
-  @apply p-0;
+  @apply bg-green;
 }
 
 /* gatsby-plugin-image */
 .gatsby-image-wrapper img {
-  border: none;
+  @apply border-0;
 }
