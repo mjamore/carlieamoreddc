@@ -4,20 +4,11 @@
   --white-color: white;
   --black-color: black;
   --gray-color: #808080;
-  --light-gray-color: #eaeaea;
-  --lightest-gray-color: #f7f7f7;
-  --dark-gray: #656565;
-  --red-color: #ad0000;
 
   /* site colors */
   --background-color: var(--white-color);
   --font-color: #505050;
-  --purple-color: #BF92BC;
   --blue-green-color: #9BDED1;
-
-  /* card */
-  --card-title-background-color: #e8e8e8;
-  --card-border-color: #e4e4e4;
 
   /* social media */
   --facebook-color: #3B5998;

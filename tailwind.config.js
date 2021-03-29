@@ -18,7 +18,12 @@ module.exports = {
         aliceblue: {
           DEFAULT: 'aliceblue',
         },
+        'facebook-color': '#3B5998',
         'font-color': '#374151',
+        'instagram-color': '#125688',
+        'linkedin-color': '#007bb5',
+        'snapchat-color': '#fffc00',
+        'twitter-color': '#55ACEE',
       },
       maxWidth: {
         page: '1200px',
