@@ -1,17 +1,23 @@
 import React from 'react';
 import servicesProvidedData from '../data/servicesProvided';
-import FlexboxDiv from './containers/flexboxDiv';
-import Card from './card';
 
 const ServicesProvided = () => {
   const services = servicesProvidedData.map((service) => (
-    <Card key={service.name} cardTitle={service.name} cardBody={service.description} />
+    <div key={service.name} className='bg-white border border-gray-200 m-5 max-w-sm'>
+      <div className='bg-aliceblue pt-5 text-center'>
+        <h3 className='mb-5 text-lg'>{service.name}</h3>
+        <hr />
+      </div>
+      <div className='p-5 text-justify'>
+        <p>{service.description}</p>
+      </div>
+    </div>
   ));
 
   return (
-    <FlexboxDiv>
+    <div className='flex flex-wrap justify-center'>
       {services}
-    </FlexboxDiv>
+    </div>
   );
 };
 
