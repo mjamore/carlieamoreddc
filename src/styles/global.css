@@ -5,9 +5,14 @@
 @import './font-awesome.css';
 @import './hamburger-nav.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   overflow-x: hidden;
 }
+
 body {
   font-family: 'Open Sans Light', Arial;
   background-color: var(--background-color);
