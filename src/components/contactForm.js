@@ -3,13 +3,6 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import {
-  form,
-  formError,
-  label,
-  input,
-  textarea,
-} from './contactForm.module.css';
 
 const submitForm = (formData) => {
   console.log('formData: ', formData);
@@ -28,36 +21,41 @@ const submitForm = (formData) => {
 };
 
 const RequiredFieldErrorMessage = () => (
-  <span className={formError}>This field is required</span>
+  <span className='text-red-800 text-xs'>This field is required</span>
 );
+
+const labelClasses = 'block my-3';
+const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-sm w-full';
+const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
+const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
 
 const ContactForm = (props) => {
   const { register, handleSubmit, errors } = useForm();
   const { className } = props;
 
   return (
-    <form className={`${form} ${className}`} onSubmit={handleSubmit(submitForm)}>
+    <form className={`bg-gray-100 border border-gray-200 max-w-xs p-5 text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
       <h4>Let&apos;s Get in Touch</h4>
       <hr />
-      <label className={label} htmlFor='name'>
+      <label className={labelClasses} htmlFor='name'>
         Name
-        <span>*</span>
-        <input className={input} type='text' name='name' id='name' ref={register({ required: true })} />
+        <span className={requiredFieldClasses}>*</span>
+        <input className={inputClasses} type='text' name='name' id='name' ref={register({ required: true })} />
         {errors.name && <RequiredFieldErrorMessage />}
       </label>
-      <label className={label} htmlFor='emailAddress'>
+      <label className={labelClasses} htmlFor='emailAddress'>
         Email address
-        <span>*</span>
-        <input className={input} type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
+        <span className={requiredFieldClasses}>*</span>
+        <input className={inputClasses} type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
         {errors.emailAddress && <RequiredFieldErrorMessage />}
       </label>
-      <label className={label} htmlFor='message'>
+      <label className={labelClasses} htmlFor='message'>
         Message
-        <span>*</span>
-        <textarea className={textarea} name='message' id='message' ref={register({ required: true })} />
+        <span className={requiredFieldClasses}>*</span>
+        <textarea className={textareaClasses} name='message' id='message' ref={register({ required: true })} />
         {errors.message && <RequiredFieldErrorMessage />}
       </label>
-      <input type='submit' value='Submit' />
+      <input className='bg-green border border-gray-400 cursor-pointer mt-3 w-full' type='submit' value='Submit' />
     </form>
   );
 };
