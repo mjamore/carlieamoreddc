@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
+import PageHeading from '../components/pageHeading';
 import ServicesProvided from '../components/servicesProvided';
 import Testimonials from '../components/testimontials';
-import { pageHeading, bold } from '../components/globalStyles.module.css';
 
 const BroadmoorHolisticDentistryPage = () => (
   <div>
@@ -15,13 +15,13 @@ const BroadmoorHolisticDentistryPage = () => (
       ]}
     />
     <PageLayout>
-      <h1 className={pageHeading}>Broadmoor Holistic Dentistry</h1>
+      <PageHeading headingText='Broadmoor Holistic Dentistry' />
       <h2>Choosing a dentist for you &amp; your family is an important decision that should not be taken lightly</h2>
       <h2>Why We are Different</h2>
       <p>Our medical world is rapidly changing into a very fast paced, high production model that runs patients through the practice as quickly as possible. The more patients that the doctor can see, the more money he or she can make. The focus is on treating symptoms with quick fixes. There is no time, no desire, and no knowledge to go beyond symptom treatment and determine the cause.  If a cause is never addressed, the problem will surely return. We have chosen a different path. You will notice from the moment you walk in that this practice will be different.</p>
       <h2>The truth is...</h2>
       {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-      <p>Dental professionals vary <span className={bold}>greatly</span> in</p>
+      <p>Dental professionals vary <span className='font-extrabold'>greatly</span> in</p>
       <ul>
         <li>Technical skills</li>
         <li>Diagnostic ability</li>
@@ -33,7 +33,7 @@ const BroadmoorHolisticDentistryPage = () => (
       </ul>
       <h2>Our committed promises...</h2>
       {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-      <p>We <span className={bold}>promise</span> to</p>
+      <p>We <span className='font-extrabold'>promise</span> to</p>
       <ul>
         <li>Take time to understand each person’s values</li>
         <li>Work with each person to create a plan that fits within their values</li>
