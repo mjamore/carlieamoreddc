@@ -1,12 +1,11 @@
 import * as React from 'react';
 import FooterNavigation from './footerNavigation';
 import ContactForm from '../contactForm';
-import { footer, socialMediaLinks, copyrightStatement } from './footer.module.css';
 
 const Footer = () => (
-  <footer className={footer}>
+  <footer className='bg-aliceblue flex flex-col items-stretch justify-around md:flex-row md:items-center py-12 px-5 shadow-container text-center'>
     <FooterNavigation />
-    <div className={socialMediaLinks}>
+    <div className='md:order-none my-12 order-3 self-end'>
       <a href='https://www.facebook.com/carlie.amore' target='_blank' rel='noreferrer' aria-label="Facebook link to Carlie Amore\'s profile page">
         <i className='fa fa-facebook' />
       </a>
@@ -22,7 +21,7 @@ const Footer = () => (
       <a href='https://www.linkedin.com/' target='_blank' rel='noreferrer' aria-label="LinkedIn link to Carlie Amore\'s profile page">
         <i className='fa fa-linkedin' />
       </a>
-      <p className={copyrightStatement}>© 2021 Carlie Amore, DDS | All Rights Reserved.</p>
+      <p className='mt-5'>© 2021 Carlie Amore, DDS | All Rights Reserved.</p>
     </div>
     <ContactForm />
   </footer>

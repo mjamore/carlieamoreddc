@@ -15,7 +15,7 @@ const FooterNavigation = () => {
   ));
 
   return (
-    <ul className='list-none text-left tracking-tight uppercase'>
+    <ul className='list-none mb-9 md:mb-0 text-left tracking-tight uppercase'>
       {navigationItems}
     </ul>
   );
