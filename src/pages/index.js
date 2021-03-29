@@ -3,35 +3,21 @@ import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/pageLayout';
 import aboutMeContent from '../data/aboutMeContent';
-import {
-  width100,
-  centered,
-  imgShadow,
-  spacedSection,
-} from '../components/globalStyles.module.css';
-import {
-  heroImageContainer,
-  tagline,
-  jaggedBorder,
-  topShadow,
-  section,
-  sectionTitle,
-  aboutMeParagraph,
-} from './index.module.css';
-import './stars.sass';
+import { jaggedBorder } from './index.module.css';
+import '../styles/stars.sass';
 
 const IndexPage = () => {
   const AboutMeSection = aboutMeContent.map((aboutMeSection, index) => {
-    const sectionClasses = index % 2 === 0 ? `${section}` : `${section} ${jaggedBorder} ${topShadow}`;
+    const sectionClasses = index % 2 === 0 ? '' : `${jaggedBorder} shadow-top`;
 
     return (
-      <div key={aboutMeSection.title} className={sectionClasses}>
-        <div className={sectionTitle}>
-          <span role='img' aria-label={aboutMeSection.emojiDescription}>{aboutMeSection.emoji}</span>
-          <h3>{aboutMeSection.title}</h3>
-          <span role='img' aria-label={aboutMeSection.emojiDescription}>{aboutMeSection.emoji}</span>
+      <div key={aboutMeSection.title} className={`p-10 ${sectionClasses}`}>
+        <div className='mb-5 text-center text-xl uppercase'>
+          <span className='text-xl' role='img' aria-label={aboutMeSection.emojiDescription}>{aboutMeSection.emoji}</span>
+          <h3 className='inline-block mx-2.5'>{aboutMeSection.title}</h3>
+          <span className='text-xl' role='img' aria-label={aboutMeSection.emojiDescription}>{aboutMeSection.emoji}</span>
         </div>
-        <p className={aboutMeParagraph}>{aboutMeSection.text}</p>
+        <p className='max-w-page mb-12 mt-5 mx-auto'>{aboutMeSection.text}</p>
       </div>
     );
   });
@@ -46,8 +32,8 @@ const IndexPage = () => {
         ]}
       />
       <PageLayout>
-        <div className={heroImageContainer}>
-          <div className={width100}>
+        <div className='flex items-center justify-center overflow-hidden relative'>
+          <div className='w-full'>
             <StaticImage
               src='../images/background-patterns/gradient3.jpg'
               alt='Blue background image'
@@ -57,14 +43,14 @@ const IndexPage = () => {
             />
           </div>
           {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-          <p className={tagline}>Doctor of Dental Surgery<br />Specializing in Holistic Dentistry</p>
+          <p className='absolute bg-gray-700 p-4 md:p-8 md:text-3xl rounded-md text-center text-lg text-white z-10'>Doctor of Dental Surgery<br />Specializing in Holistic Dentistry</p>
           <div id='stars' />
           <div id='stars2' />
           <div id='stars3' />
         </div>
-        <div className={`${centered} ${spacedSection}`}>
+        <div className='text-center my-12'>
           <StaticImage
-            className={imgShadow}
+            className='border-4 border-green shadow'
             src='../images/carlie/carlie.webp'
             alt='Dr. Carlie Amore, DDS'
             placeholder='blurred'
