@@ -1,6 +1,4 @@
-@import './typography.css';
 @import './colors.css';
-@import './variables.css';
 @import './font-awesome.css';
 @import './hamburger-nav.css';
 
@@ -8,20 +6,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../fonts/OpenSans-Regular.ttf');
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Open Sans Light';
+    src: url('../fonts/OpenSans-Light.ttf');
+    font-display: swap;
+  }
+}
+
 html,
 body {
   @apply overflow-x-hidden;
 }
 
 body {
-  @apply text-font-color;
-  @apply font-site-font-family;
+  @apply font-site-font-family text-font-color;
 }
 
 hr {
-  @apply border-0;
-  @apply h-px;
-  @apply bg-hr;
+  @apply bg-hr border-0 h-px;
 }
 
 /* swiperjs */

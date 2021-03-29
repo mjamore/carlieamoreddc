@@ -37,10 +37,16 @@ module.exports = {
       outline: {
         green: '2px solid #9bded1',
       },
+      textShadow: {
+        snapchat: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line global-require
+    require('tailwindcss-textshadow'),
+  ],
 };

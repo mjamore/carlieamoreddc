@@ -1,10 +1,6 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
-  @apply absolute;
-  @apply w-9;
-  @apply h-7;
-  @apply right-4;
-  @apply top-5;
+  @apply absolute h-7 right-4 top-5 w-9;
 }
 
 /* Color/shape of burger icon bars */
@@ -24,6 +20,5 @@
 
 /* General sidebar styles */
 .bm-menu {
-  @apply bg-aliceblue;
-  @apply py-10 px-6;
+  @apply bg-aliceblue px-6 py-10;
 }
