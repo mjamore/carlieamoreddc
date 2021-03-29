@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Logo = () => (
-  <Link to='/' className='flex no-underline text-black'>
+  <Link to='/' className='flex items-center no-underline text-black'>
     <StaticImage
       src='../../images/logos/heart-tooth.png'
       alt='Heart tooth logo'

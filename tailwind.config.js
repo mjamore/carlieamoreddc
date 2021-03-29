@@ -6,6 +6,7 @@ module.exports = {
       boxShadow: {
         DEFAULT: '0px 0px 5px 2px #808080',
         'circular-img': '2px 2px 5px #808080',
+        container: '0px 0px 5px #808080',
       },
       colors: {
         transparent: 'transparent',
