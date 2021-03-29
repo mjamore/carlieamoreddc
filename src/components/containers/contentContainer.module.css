@@ -1,9 +1,0 @@
-.content-container {
-  margin: 50px;
-}
-
-@media screen and (max-width: 600px) {
-  .content-container {
-    margin: 20px;
-  }
-}

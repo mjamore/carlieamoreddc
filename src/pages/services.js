@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
-import ContentContainer from '../components/containers/contentContainer';
 import ServicesProvided from '../components/servicesProvided';
 import { pageHeading } from '../components/globalStyles.module.css';
 
@@ -15,10 +14,10 @@ const ServicesPages = () => (
       ]}
     />
     <PageLayout>
-      <ContentContainer>
+      <div className='m-12'>
         <h1 className={pageHeading}>Specialty Services</h1>
         <ServicesProvided />
-      </ContentContainer>
+      </div>
     </PageLayout>
   </div>
 );
