@@ -79,7 +79,6 @@ Influences:
 - Customize SEO metadata to each page
 - Figure out why offline support isn't working
 - Add google analytics
-- convert reset of CSS to Tailwind
 - Create the Meet the Team section
 - When contact form is submitted, update the ContactForm UI
 
