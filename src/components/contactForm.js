@@ -40,19 +40,19 @@ const ContactForm = (props) => {
       <label className={labelClasses} htmlFor='name'>
         Name
         <span className={requiredFieldClasses}>*</span>
-        <input className={inputClasses} type='text' name='name' id='name' ref={register({ required: true })} />
+        <input className={inputClasses} type='text' name='name' ref={register({ required: true })} />
         {errors.name && <RequiredFieldErrorMessage />}
       </label>
       <label className={labelClasses} htmlFor='emailAddress'>
         Email address
         <span className={requiredFieldClasses}>*</span>
-        <input className={inputClasses} type='email' name='emailAddress' id='emailAddress' ref={register({ required: true })} />
+        <input className={inputClasses} type='email' name='emailAddress' ref={register({ required: true })} />
         {errors.emailAddress && <RequiredFieldErrorMessage />}
       </label>
       <label className={labelClasses} htmlFor='message'>
         Message
         <span className={requiredFieldClasses}>*</span>
-        <textarea className={textareaClasses} name='message' id='message' ref={register({ required: true })} />
+        <textarea className={textareaClasses} name='message' ref={register({ required: true })} />
         {errors.message && <RequiredFieldErrorMessage />}
       </label>
       <input className='bg-green border border-gray-400 cursor-pointer mt-3 w-full' type='submit' value='Submit' />
