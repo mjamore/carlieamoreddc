@@ -1,12 +1,20 @@
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/pageLayout';
 import aboutMeContent from '../data/aboutMeContent';
 import '../styles/stars.sass';
 
-const IndexPage = () => {
-  const AboutMeSection = aboutMeContent.map((aboutMeSection, index) => {
+// Typescript declarations
+interface AboutMeSection {
+  title: string;
+  emoji: string;
+  emojiDescription: string;
+  text: string;
+}
+
+const IndexPage = (): ReactElement => {
+  const AboutMeSection = aboutMeContent.map((aboutMeSection: AboutMeSection, index): ReactElement => {
     let sectionClasses = '';
     if (index % 2 !== 0) {
       sectionClasses += 'bg-green bg-jagged-image bg-jagged-size bg-left-bottom bg-repeat-x shadow-top';

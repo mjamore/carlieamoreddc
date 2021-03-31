@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
 import PageHeading from '../components/pageHeading';
 
-const EducationPage = () => (
+const EducationPage = (): ReactElement => (
   <div>
     <Helmet
       title='Dr. Carlie Amore, DDS | Doctor of Dental Surgery'
