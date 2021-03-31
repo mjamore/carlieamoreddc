@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import HeaderNavigation from './headerNavigation';
-import Header from './header.tsx';
-import Footer from './footer.tsx';
+import Header from './header';
+import Footer from './footer';
 
-const PageLayout = ({ children }) => (
+// Typescript declarations
+interface PageLayoutProps {
+  /**
+   * The React components that you want rendered as children, nested inside of the PageLayout component
+   */
+  children: ReactElement;
+}
+
+const PageLayout = ({ children }: PageLayoutProps): ReactElement => (
   <div>
     <Helmet>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' media='all' />
@@ -19,9 +27,5 @@ const PageLayout = ({ children }) => (
     <Footer />
   </div>
 );
-
-PageLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default PageLayout;
