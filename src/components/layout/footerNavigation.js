@@ -1,15 +1,9 @@
-import React, { ReactElement } from 'react';
+import * as React from 'react';
 import { Link } from 'gatsby';
 import navigationLinks from '../../data/navigationLinks';
 
-// Typescript declarations
-interface NavigationItem {
-  href: string;
-  text: string;
-}
-
-const FooterNavigation = (): ReactElement => {
-  const navigationItems = navigationLinks.map((navigationItem: NavigationItem): ReactElement => (
+const FooterNavigation = () => {
+  const navigationItems = navigationLinks.map((navigationItem) => (
     <li key={navigationItem.href}>
       <Link
         to={navigationItem.href}

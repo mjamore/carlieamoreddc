@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import * as React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const Logo = (): ReactElement => (
+const Logo = () => (
   <Link to='/' className='flex items-center no-underline text-black'>
     <StaticImage
       src='../../images/logos/heart-tooth.png'

@@ -7,14 +7,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-plugin-typescript',
-      options: {
-        isTSX: true, // defaults to false
-        jsxPragma: 'jsx', // defaults to "React"
-        allExtensions: true, // defaults to false
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',

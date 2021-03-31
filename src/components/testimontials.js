@@ -13,7 +13,7 @@ SwiperCore.use([Autoplay, Pagination, A11y]);
 
 const Testimonials = () => {
   const testimonialItems = testimonialData.map((testimonial) => (
-    <SwiperSlide key={testimonialData.name}>
+    <SwiperSlide key={testimonial.name}>
       <Card
         heading={testimonial.name}
         subHeading={testimonial.service}

@@ -1,48 +1,37 @@
 /* eslint-disable no-console */
-import React, { ReactElement } from 'react';
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-// Typescript declarations
-interface ContactFormProps {
-  /**
-   * This class (or classes) will get applied to outermost element of this component, the form tag
-   */
-  className: string;
-}
-
-interface FormData {
-  name: string,
-  emailAddress: string,
-  message: string,
-}
-
-// Called when the user submits the contact form.
-const submitForm = (formData: FormData): void => {
+const submitForm = (formData) => {
   console.log('formData: ', formData);
 
   const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
 
   axios.get(emailUrl)
     .then((response) => {
+      // handle success
       console.log('success response: ', response);
     })
     .catch((error) => {
+      // handle error
       console.log('error response: ', error);
     });
 };
 
-const RequiredFieldErrorMessage = (): ReactElement => (
+const RequiredFieldErrorMessage = () => (
   <span className='text-red-800 text-xs'>This field is required</span>
 );
 
-const ContactForm = ({ className }: ContactFormProps): ReactElement => {
-  const { register, handleSubmit, errors } = useForm();
+const labelClasses = 'block my-3';
+const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-sm w-full';
+const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
+const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
 
-  const labelClasses = 'block my-3';
-  const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-sm w-full';
-  const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
-  const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
+const ContactForm = (props) => {
+  const { register, handleSubmit, errors } = useForm();
+  const { className } = props;
 
   return (
     <form className={`bg-gray-100 border border-gray-200 max-w-xs p-5 text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
@@ -69,6 +58,10 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
       <input className='bg-green border border-gray-400 cursor-pointer mt-3 w-full' type='submit' value='Submit' />
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  className: PropTypes.string,
 };
 
 ContactForm.defaultProps = {
