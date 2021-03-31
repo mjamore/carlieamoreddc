@@ -6,9 +6,10 @@ module.exports = {
     'airbnb',
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  parser: 'babel-eslint',
-  plugins: ['react'],
+  parser: ['babel-eslint', '@typescript-eslint/parser'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
     strict: [2, 'never'],
     'react/jsx-uses-react': 2,

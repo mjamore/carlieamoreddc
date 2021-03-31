@@ -71,4 +71,8 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   );
 };
 
+ContactForm.defaultProps = {
+  className: null,
+};
+
 export default ContactForm;

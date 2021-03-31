@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
-import ContactForm from '../contactForm.tsx';
+import ContactForm from '../contactForm';
 import navigationLinks from '../../data/navigationLinks';
 
 const HeaderNavigation = () => {

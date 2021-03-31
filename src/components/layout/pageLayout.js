@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import HeaderNavigation from './headerNavigation';
-import Header from './header';
-import Footer from './footer';
+import Header from './header.tsx';
+import Footer from './footer.tsx';
 
 const PageLayout = ({ children }) => (
   <div>
