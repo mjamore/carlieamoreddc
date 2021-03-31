@@ -1,11 +1,17 @@
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
 import ContactForm from '../contactForm';
 import navigationLinks from '../../data/navigationLinks';
 
-const HeaderNavigation = () => {
-  const navigationItems = navigationLinks.map((navigationLink) => (
+// Typescript declarations
+interface NavigationLink {
+  href: string;
+  text: string;
+}
+
+const HeaderNavigation = (): ReactElement => {
+  const navigationItems = navigationLinks.map((navigationLink: NavigationLink): ReactElement => (
     <Link
       key={navigationLink.href}
       to={navigationLink.href}
