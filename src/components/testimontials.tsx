@@ -1,5 +1,5 @@
 /* eslint-disable import/order */
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Card from './card';
 
@@ -10,7 +10,7 @@ import 'swiper/swiper-bundle.min.css';
 
 SwiperCore.use([Autoplay, Pagination, A11y]);
 
-const Testimonials = () => {
+const Testimonials = (): ReactElement => {
   const maxWidthClass = 'max-w-md';
   const imageClasses = 'my-3 rounded-full shadow-circular-img';
   const imagePlaceholderType = 'blurred';
