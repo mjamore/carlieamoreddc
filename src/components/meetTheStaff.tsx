@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Card from './card';
 
-const MeetTheStaff = () => {
+const MeetTheStaff = (): ReactElement => {
   const maxWidthClass = 'max-w-md';
   const imageClasses = 'my-3 rounded-full shadow-circular-img';
   const imagePlaceholderType = 'blurred';
