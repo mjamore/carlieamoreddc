@@ -1,26 +1,35 @@
 /* eslint-disable no-console */
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
-const submitForm = (formData) => {
+// Typescript declarations
+interface ContactFormProps {
+  className: string;
+}
+
+interface FormData {
+  name: string;
+  emailAddress: string;
+  message: string;
+}
+
+const submitForm = (formData: FormData): void => {
   console.log('formData: ', formData);
 
   const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
 
   axios.get(emailUrl)
     .then((response) => {
-      // handle success
       console.log('success response: ', response);
     })
     .catch((error) => {
-      // handle error
       console.log('error response: ', error);
     });
 };
 
-const RequiredFieldErrorMessage = () => (
+const RequiredFieldErrorMessage = (): ReactElement => (
   <span className='text-red-800 text-xs'>This field is required</span>
 );
 
@@ -29,9 +38,8 @@ const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-
 const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
 const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
 
-const ContactForm = (props) => {
+const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   const { register, handleSubmit, errors } = useForm();
-  const { className } = props;
 
   return (
     <form className={`bg-gray-100 border border-gray-200 max-w-xs p-5 text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
@@ -60,12 +68,8 @@ const ContactForm = (props) => {
   );
 };
 
-ContactForm.propTypes = {
-  className: PropTypes.string,
-};
-
 ContactForm.defaultProps = {
-  className: null,
-};
+  className: PropTypes.string.isRequired,
+}
 
 export default ContactForm;
