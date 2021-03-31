@@ -16,7 +16,7 @@ const Card = ({
   description,
   maxWidth,
 }: CardProps): ReactElement => (
-  <div className={`border-4 border-green flex flex-col items-center justify-center ${maxWidth} mx-auto my-10 p-3 shadow`}>
+  <div className={`border-4 border-green flex flex-col items-center justify-center ${maxWidth} mx-5 my-10 p-3 shadow md:mx-auto`}>
     {children}
     <h4 className='my-3 text-lg'>{heading}</h4>
     <h5 className='my-2'>{subHeading}</h5>

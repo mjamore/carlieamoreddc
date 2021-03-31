@@ -3,15 +3,15 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Card from './card';
 
 const MeetTheStaff = (): ReactElement => {
-  const maxWidthClass = 'max-w-md';
+  const maxWidthClass = 'max-w-sm';
   const imageClasses = 'my-3 rounded-full shadow-circular-img';
   const imagePlaceholderType = 'blurred';
   const loadingType = 'eager';
 
   return (
     <div>
-      <h3 className='text-center'>Meet The Team</h3>
-      <div className='flex justify-center'>
+      <h3 className='text-center text-3xl'>Meet The Team</h3>
+      <div className='flex flex-col justify-center lg:flex-row'>
         <Card
           heading='Lori Moore'
           subHeading='Office Manager'
