@@ -24,7 +24,7 @@ const testimonialData = [
     userImage: '../images/testimonials/3.jpg',
   },
   {
-    name: 'Cornell Haynes Jr',
+    name: 'Cornell Haynes Jr.',
     service: 'Flossin\' Grill',
     text: '"Got 30 down at the bottom, 30 more at the top. All invisible set in little ice cube blocks. If I could call it a drink, call it a smile on the rocks. If I could call out a price, let\'s say I call out a lot."',
     userImage: '../images/testimonials/3.jpg',

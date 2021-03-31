@@ -4,6 +4,7 @@ import PageLayout from '../components/layout/pageLayout';
 import PageHeading from '../components/pageHeading';
 import ServicesProvided from '../components/servicesProvided';
 import Testimonials from '../components/testimontials';
+import MeetTheStaff from '../components/meetTheStaff';
 
 const BroadmoorHolisticDentistryPage = () => (
   <div>
@@ -41,6 +42,7 @@ const BroadmoorHolisticDentistryPage = () => (
         <li>Look at the cause of disease, and not just band-aid over symptoms</li>
       </ul>
       <ServicesProvided />
+      <MeetTheStaff />
       <Testimonials />
     </PageLayout>
   </div>
