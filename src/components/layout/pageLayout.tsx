@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import HeaderNavigation from './headerNavigation';
@@ -7,7 +7,7 @@ import Footer from './footer';
 
 // Typescript declarations
 interface PageLayoutProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 const PageLayout = ({ children }: PageLayoutProps): ReactElement => (

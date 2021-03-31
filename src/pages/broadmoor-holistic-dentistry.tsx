@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
 import PageHeading from '../components/pageHeading';
@@ -6,7 +6,7 @@ import ServicesProvided from '../components/servicesProvided';
 import Testimonials from '../components/testimontials';
 import MeetTheStaff from '../components/meetTheStaff';
 
-const BroadmoorHolisticDentistryPage = () => (
+const BroadmoorHolisticDentistryPage = (): ReactElement => (
   <div>
     <Helmet
       title='Dr. Carlie Amore, DDS | Doctor of Dental Surgery'
