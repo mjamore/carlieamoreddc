@@ -1,5 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactElement } from 'react';
+
+// Typescript declarations
+interface CardProps {
+  children: ReactElement;
+  heading: string;
+  subHeading: string;
+  description: string;
+  maxWidth: string;
+}
 
 const Card = ({
   children,
@@ -7,7 +15,7 @@ const Card = ({
   subHeading,
   description,
   maxWidth,
-}) => (
+}: CardProps): ReactElement => (
   <div className={`border-4 border-green flex flex-col items-center justify-center ${maxWidth} mx-auto my-10 p-3 shadow`}>
     {children}
     <h4 className='my-3 text-lg'>{heading}</h4>
@@ -16,14 +24,6 @@ const Card = ({
     <p className='m-3 text-center'>{description}</p>
   </div>
 );
-
-Card.propTypes = {
-  children: PropTypes.node.isRequired,
-  heading: PropTypes.string,
-  subHeading: PropTypes.string,
-  description: PropTypes.string,
-  maxWidth: PropTypes.string,
-};
 
 Card.defaultProps = {
   heading: '',
