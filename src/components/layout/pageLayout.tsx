@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import HeaderNavigation from './headerNavigation';
 import Header from './header';
 import Footer from './footer';
 
-const PageLayout = ({ children }) => (
+// Typescript declarations
+interface PageLayoutProps {
+  children: ReactElement;
+}
+
+const PageLayout = ({ children }: PageLayoutProps): ReactElement => (
   <div>
     <Helmet>
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' media='all' />

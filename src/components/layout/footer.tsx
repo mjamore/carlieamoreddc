@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import FooterNavigation from './footerNavigation';
 import ContactForm from '../contactForm';
 
-const Footer = () => (
+const Footer = (): ReactElement => (
   <footer className='bg-aliceblue flex flex-col items-stretch justify-around md:flex-row md:items-center py-12 px-5 shadow-container text-center'>
     <FooterNavigation />
     <div className='md:order-none my-12 order-3 self-end'>

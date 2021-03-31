@@ -70,6 +70,6 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
 
 ContactForm.defaultProps = {
   className: PropTypes.string.isRequired,
-}
+};
 
 export default ContactForm;
