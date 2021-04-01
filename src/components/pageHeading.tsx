@@ -6,7 +6,11 @@ interface PageHeadingProps {
 }
 
 const PageHeading = ({ headingText }: PageHeadingProps): ReactElement => (
-  <h1 className='my-12 text-3xl text-center'>{headingText}</h1>
+  <div className='text-center'>
+    <div className='inline-block'>
+      <h1 className='my-12 page-heading relative text-3xl text-center'>{headingText}</h1>
+    </div>
+  </div>
 );
 
 export default PageHeading;
