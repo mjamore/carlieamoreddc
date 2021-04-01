@@ -8,8 +8,8 @@ const navigationLinks = [
     href: '/education/',
   },
   {
-    text: 'Services',
-    href: '/services/',
+    text: 'Specialties',
+    href: '/specialties/',
   },
   {
     text: 'Broadmoor Holistic Dentistry',
