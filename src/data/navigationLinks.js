@@ -24,8 +24,8 @@ const navigationLinks = [
     href: '/broadmoor-holistic-dentistry/',
   },
   {
-    text: 'Testimonials',
-    href: '/testimonials/',
+    text: 'Patient Testimonials',
+    href: '/patient-testimonials/',
   },
 ];
 
