@@ -12,6 +12,14 @@ const navigationLinks = [
     href: '/specialties/',
   },
   {
+    text: 'Holistic Dentistry',
+    href: '/holistic-dentistry/',
+  },
+  {
+    text: 'Frequently Asked Questions',
+    href: '/frequently-asked-questions/',
+  },
+  {
     text: 'Broadmoor Holistic Dentistry',
     href: '/broadmoor-holistic-dentistry/',
   },
