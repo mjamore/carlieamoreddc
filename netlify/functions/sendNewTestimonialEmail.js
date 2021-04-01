@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
 
     // create a response body object with all of the information about this request/response
     const responseBody = {
-      contactFormData: {
+      newTestimonialFormData: {
         name: event.queryStringParameters.name,
         emailAddress: event.queryStringParameters.email,
         servicePerformed: event.queryStringParameters.service,
