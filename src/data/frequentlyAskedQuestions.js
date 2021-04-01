@@ -11,6 +11,10 @@ const frequentAskedQuestion = [
     question: 'Why are Mercury fillings so dangerous?',
     answer: 'This paragraph explains why Mercury fillings are bad.  However, <a class="link" href="https://health.clevelandclinic.org/do-you-worry-about-mercury-in-your-silver-dental-fillings/" target="_blank" rel="noopener noreferrer">this article from the Cleveland Clinic</a> and <a class="link" href="https://www.webmd.com/oral-health/news/20090728/fda-mercury-fillings-not-harmful" target="_blank" rel="noopener noreferrer">this article from WebMD</a> suggest there have not been any adverse health effects tied to Mercury fillings.',
   },
+  {
+    question: 'Did we really land on the moon?',
+    answer: 'Really...?  Of course not.  Why aren\'t there any stars in the background of the pictures?  Explain that...  Also when I look at the moon, I don\'t ever see any people walking around up there.  What happened to all the moon people?  Oh, that\'s right, there wasn\'t ever anyone up there.',
+  },
 ];
 
 export default frequentAskedQuestion;
