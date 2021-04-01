@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import FooterNavigation from './footerNavigation';
-import ContactForm from '../contactForm';
+import ContactForm from '../forms/contactForm';
 
 const Footer = (): ReactElement => (
   <footer className='bg-aliceblue flex flex-col items-stretch justify-around md:flex-row md:items-center py-12 px-5 shadow-container text-center'>

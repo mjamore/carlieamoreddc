@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import RequiredFieldErrorMessage from './requiredFieldErrorMessage';
 
 // Typescript declarations
 interface ContactFormProps {
@@ -18,7 +19,7 @@ interface FormData {
 const submitForm = (formData: FormData): void => {
   console.log('formData: ', formData);
 
-  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
+  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?formType=contact&name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
 
   axios.get(emailUrl)
     .then((response) => {
@@ -29,17 +30,12 @@ const submitForm = (formData: FormData): void => {
     });
 };
 
-const RequiredFieldErrorMessage = (): ReactElement => (
-  <span className='text-red-800 text-xs'>This field is required</span>
-);
-
-const labelClasses = 'block my-3';
-const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-sm w-full';
-const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
-const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
-
 const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   const { register, handleSubmit, errors } = useForm();
+  const labelClasses = 'block my-3';
+  const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-sm w-full';
+  const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
+  const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
 
   return (
     <form className={`bg-gray-100 border border-gray-200 max-w-xs p-5 text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>

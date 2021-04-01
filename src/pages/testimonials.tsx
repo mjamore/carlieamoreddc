@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import PageLayout from '../components/layout/pageLayout';
 import PageHeading from '../components/pageHeading';
 import Testimonials from '../components/testimontials';
+import TestimonialsForm from '../components/forms/testimonialForm';
 
 const TestimonialsPage = (): ReactElement => (
   <div>
@@ -15,7 +16,11 @@ const TestimonialsPage = (): ReactElement => (
     />
     <PageLayout>
       <PageHeading headingText='Patient Testimonials' />
+      <p className='max-w-page mx-5 my-6 md:mx-auto'>The best compliment I can recieve is to hear that my patients are satified with the service I've provided.  I take an enormous amount of pride in the work that I do, and my primary goal is always to make sure my patients are happy and healthy.</p>
+      <p className='max-w-page mx-5 my-6 md:mx-auto'>Here are a few of my favorite patient testimonials that I've received over the years.</p>
       <Testimonials />
+      <p className='max-w-page mx-5 my-6 md:mx-auto'>I'd love to hear about your experience!  If we've worked together in the past, feel free to let me know about your experience, and I'll add your testimonial to the site!</p>
+      <TestimonialsForm />
     </PageLayout>
   </div>
 );
