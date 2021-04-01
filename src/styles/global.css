@@ -16,6 +16,11 @@
     src: url('../fonts/OpenSans-Light.ttf');
     font-display: swap;
   }
+  @font-face {
+    font-family: 'Source Sans Light';
+    src: url('../fonts/SourceSansPro-ExtraLight.ttf');
+    font-display: swap;
+  }
 }
 
 html,
@@ -25,6 +30,14 @@ body {
 
 body {
   @apply font-site-font-family text-font-color;
+}
+
+p {
+  @apply text-xl tracking-wide;
+}
+
+h3 {
+  @apply text-3xl;
 }
 
 hr {

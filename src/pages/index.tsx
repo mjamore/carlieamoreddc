@@ -23,9 +23,7 @@ const IndexPage = (): ReactElement => {
     return (
       <div key={aboutMeSection.title} className={`p-10 ${sectionClasses}`}>
         <div className='mb-5 text-center text-xl uppercase'>
-          <span className='text-xl' role='img' aria-label={aboutMeSection.emojiDescription}>{aboutMeSection.emoji}</span>
           <h3 className='inline-block mx-2.5'>{aboutMeSection.title}</h3>
-          <span className='text-xl' role='img' aria-label={aboutMeSection.emojiDescription}>{aboutMeSection.emoji}</span>
         </div>
         <p className='max-w-page mb-12 mt-5 mx-auto'>{aboutMeSection.text}</p>
       </div>

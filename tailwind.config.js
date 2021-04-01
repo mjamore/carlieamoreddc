@@ -33,7 +33,7 @@ module.exports = {
         'twitter-color': '#55ACEE',
       },
       fontFamily: {
-        'site-font-family': '"Open Sans Light", Arial',
+        'site-font-family': '"Source Sans Light", Arial',
       },
       maxWidth: {
         page: '1200px',
