@@ -16,7 +16,7 @@ This is the source code for Carlie Amore's dentistry website:
     ```
 
 ## Workflow for Developing/Deploying/Testing the Netlify Serverless Function:
-In order to send emails to Carlie when the user submits the contact form on the website, this application contains a serverless function that is deployed through Netlify, located in `netlify/functions/sendEmail.js`.
+In order to send emails to Carlie when the user submits the contact form on the website, this application contains a serverless function that is deployed through Netlify, located in `netlify/functions/sendContactFormEmail.js`.
 
 1.  Make sure you have a .env file setup at the root of this project that contains an entry for `MAILGUN_API_KEY` and `EMAIL_T0_ADDRESS`. The MAILGUN_API_KEY value can be retrieved from https://app.mailgun.com/app/account/security/api_keys.
 
@@ -24,17 +24,17 @@ In order to send emails to Carlie when the user submits the contact form on the 
     netlify dev
     ```
 
-3. You should now be able to invoke the function by hitting http://localhost:{PORT_NUMBER_SPECIFIED_IN_OUTPUT_FROM_NETLIFY_DEV_COMMAND}/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
+3. You should now be able to invoke the function by hitting http://localhost:{PORT_NUMBER_SPECIFIED_IN_OUTPUT_FROM_NETLIFY_DEV_COMMAND}/.netlify/functions/sendContactFormEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
 
 4.  ```shell
     netlify deploy --prod
     ```
 
-5. You should now be able to invoke the function by hitting https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
+5. You should now be able to invoke the function by hitting https://carlieamoredds.netlify.app/.netlify/functions/sendContactFormEmail/?name=Jack%20Jackson&email=paul@aol.com&message=Dr.%20Amore%20began%20prioritizing%20her%20journey in the browser.
 
 6. The following are ways to test/debug the Nelify function:
     - You can see the response body in the browser when you hit the endpoint from step 5.
-    - You can see the function logs at https://app.netlify.com/sites/carlieamoredds/functions/sendEmail
+    - You can see the function logs at https://app.netlify.com/sites/carlieamoredds/functions/sendContactFormEmail
     - The email should show up in the Mailgun user interface dashboard.
     - You should recieve the email at the EMAIL_T0_ADDRESS defined in step 1
 

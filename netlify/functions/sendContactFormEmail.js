@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable func-names */
 require('dotenv').config();
 const mailgun = require('mailgun-js');
 
