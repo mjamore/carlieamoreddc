@@ -14,7 +14,7 @@ interface FAQ {
 
 const EducationPage = (): ReactElement => {
   const faqs = frequentlyAskedQuestionsData.map((faq: FAQ): ReactElement => (
-    <div>
+    <div key={faq.question}>
       <Faq question={faq.question} answer={ReactHtmlParser(faq.answer)} />
     </div>
   ));
@@ -30,9 +30,7 @@ const EducationPage = (): ReactElement => {
       />
       <PageLayout>
         <PageHeading headingText='Most Frequently Asked Questions' />
-        <div className='max-w-page mx-5 md:mx-auto'>
-          {faqs}
-        </div>
+        {faqs}
       </PageLayout>
     </div>
   );

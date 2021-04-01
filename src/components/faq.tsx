@@ -7,8 +7,8 @@ interface FrequentAskedQuestionProps {
 }
 
 const FrequentAskedQuestion = ({ question, answer }: FrequentAskedQuestionProps): ReactElement => (
-  <div className='my-3'>
-    <h3>{question}</h3>
+  <div className='my-12'>
+    <h2 className='my-1'>{question}</h2>
     <p>{answer}</p>
   </div>
 );

@@ -14,7 +14,7 @@ interface AboutMeSection {
 }
 
 const IndexPage = (): ReactElement => {
-  const AboutMeSection = aboutMeContent.map((aboutMeSection: AboutMeSection, index): ReactElement => {
+  const AboutMeContent = aboutMeContent.map((aboutMeSection: AboutMeSection, index): ReactElement => {
     let sectionClasses = '';
     if (index % 2 !== 0) {
       sectionClasses += 'bg-green bg-jagged-image bg-jagged-size bg-left-bottom bg-repeat-x shadow-top';
@@ -39,7 +39,7 @@ const IndexPage = (): ReactElement => {
           { name: 'keywords', content: 'holistic dentist, holistic dentistry, dentist in Overland Park' },
         ]}
       />
-      <PageLayout>
+      <PageLayout fullWidth>
         <div className='flex items-center justify-center overflow-hidden relative'>
           <div className='w-full'>
             <StaticImage
@@ -65,7 +65,7 @@ const IndexPage = (): ReactElement => {
             aspectRatio={21 / 9}
           />
         </div>
-        {AboutMeSection}
+        {AboutMeContent}
       </PageLayout>
     </div>
   );
