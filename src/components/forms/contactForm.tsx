@@ -59,7 +59,7 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
         <textarea className={textareaClasses} name='message' ref={register({ required: true })} />
         {errors.message && <RequiredFieldErrorMessage />}
       </label>
-      <input className='bg-green border border-gray-400 cursor-pointer mt-3 w-full' type='submit' value='Submit' />
+      <input className='bg-green border border-gray-400 cursor-pointer mt-3 p-3 w-full' type='submit' value='Submit' />
     </form>
   );
 };
