@@ -9,6 +9,7 @@ import RequiredFieldErrorMessage from './requiredFieldErrorMessage';
 interface FormData {
   name: string;
   emailAddress: string;
+  service: string;
   testimonial: string;
 }
 
@@ -20,7 +21,7 @@ interface Service {
 const submitForm = (formData: FormData): void => {
   console.log('formData: ', formData);
 
-  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendEmail/?formType=testimonial&name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
+  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendNewTestimonialEmail/?name=${formData.name}&email=${formData.emailAddress}&service=${formData.service}&testimonial=${formData.testimonial}`;
 
   axios.get(emailUrl)
     .then((response) => {

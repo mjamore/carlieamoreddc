@@ -19,7 +19,7 @@ interface FormData {
 const submitForm = (formData: FormData): void => {
   console.log('formData: ', formData);
 
-  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendContactFormEmail/?formType=contact&name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
+  const emailUrl = `https://carlieamoredds.netlify.app/.netlify/functions/sendContactFormEmail/?name=${formData.name}&email=${formData.emailAddress}&message=${formData.message}`;
 
   axios.get(emailUrl)
     .then((response) => {
