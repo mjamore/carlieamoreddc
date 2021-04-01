@@ -5,7 +5,7 @@ const navigationLinks = [
   },
   {
     text: 'My Education',
-    href: '/education/',
+    href: '/my-education/',
   },
   {
     text: 'Specialties',

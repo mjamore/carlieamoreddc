@@ -21,6 +21,11 @@
     src: url('../fonts/SourceSansPro-ExtraLight.ttf');
     font-display: swap;
   }
+  @font-face {
+    font-family: 'Source Sans Regular';
+    src: url('../fonts/SourceSansPro-Regular.ttf');
+    font-display: swap;
+  }
 }
 
 html,
@@ -36,12 +41,37 @@ p {
   @apply text-xl tracking-wide;
 }
 
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
 h3 {
   @apply text-3xl;
 }
 
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-lg;
+}
+
 hr {
   @apply bg-hr border-0 h-px;
+}
+
+.link {
+  @apply text-link-color;
+  @apply font-link-text;
 }
 
 .page-heading::before {
@@ -51,7 +81,7 @@ hr {
   bottom: -5px;
   width: 110%;
   height: 14px;
-  transform: skew(-12deg) translateX(-50%);
+  transform: skew(-32deg) translateX(-50%);
   @apply bg-green;
   z-index: -1;
 }

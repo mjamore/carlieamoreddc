@@ -14,6 +14,10 @@ const EducationPage = (): ReactElement => (
     />
     <PageLayout>
       <PageHeading headingText='My Education' />
+      <h2>Louisiana State University</h2>
+      <h2>National Board Dental Examination</h2>
+      <h2>Residency</h2>
+      <h2>Dental Conferences</h2>
     </PageLayout>
   </div>
 );

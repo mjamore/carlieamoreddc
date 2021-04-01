@@ -28,12 +28,14 @@ module.exports = {
         'facebook-color': '#3B5998',
         'font-color': '#374151',
         'instagram-color': '#125688',
+        'link-color': '#3D4B8C',
         'linkedin-color': '#007bb5',
         'snapchat-color': '#fffc00',
         'twitter-color': '#55ACEE',
       },
       fontFamily: {
         'site-font-family': '"Source Sans Light", Arial',
+        'link-text': '"SourceSansPro-Regular", Arial',
       },
       maxWidth: {
         page: '1200px',
