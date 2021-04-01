@@ -13,7 +13,7 @@ const EducationPage = (): ReactElement => (
       ]}
     />
     <PageLayout>
-      <PageHeading headingText='Education' />
+      <PageHeading headingText='My Education' />
     </PageLayout>
   </div>
 );

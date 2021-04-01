@@ -4,7 +4,7 @@ const navigationLinks = [
     href: '/',
   },
   {
-    text: 'Education',
+    text: 'My Education',
     href: '/education/',
   },
   {
