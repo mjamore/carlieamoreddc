@@ -58,7 +58,7 @@ const IndexPage = (): ReactElement => {
           <div id='stars2' />
           <div id='stars3' />
         </div>
-        <div className='text-center my-12'>
+        <div className='text-center m-5 md:my-12'>
           <StaticImage
             className='border-4 border-green shadow'
             src='../images/carlie/carlie.webp'
