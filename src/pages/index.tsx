@@ -22,10 +22,13 @@ const IndexPage = (): ReactElement => {
 
     return (
       <div key={aboutMeSection.title} className={`p-10 ${sectionClasses}`}>
-        <div className='mb-5 text-center text-xl'>
-          <h2 className='inline-block mx-2.5'>{aboutMeSection.title}</h2>
+        <div className='max-w-page mx-auto'>
+          <div className='mb-5 text-center text-xl'>
+            <h2 className='inline-block mx-2.5'>{aboutMeSection.title}</h2>
+          </div>
+          <hr />
+          <p className='mb-12 mt-5'>{aboutMeSection.text}</p>
         </div>
-        <p className='max-w-page mb-12 mt-5 mx-auto'>{aboutMeSection.text}</p>
       </div>
     );
   });
