@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 // Typescript delcarations
 interface FrequentAskedQuestionProps {
   question: string;
-  answer: string;
+  answer: ReactElement[];
 }
 
 const FrequentAskedQuestion = ({ question, answer }: FrequentAskedQuestionProps): ReactElement => (
