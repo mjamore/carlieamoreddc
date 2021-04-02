@@ -84,10 +84,8 @@ Influences:
 
 ## To-Do:
 - Customize SEO metadata to each page
-- Figure out why offline support isn't working
 - Add google analytics
-- Create the Meet the Team section
-- When contact form is submitted, update the ContactForm UI
+- When testimonials form is submitted, update the TestimonialForm UI
 - Update 404 page
 
 Heart tooth logos:

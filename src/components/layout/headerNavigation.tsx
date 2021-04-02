@@ -15,7 +15,7 @@ const HeaderNavigation = (): ReactElement => {
     <Link
       key={navigationLink.href}
       to={navigationLink.href}
-      className='block hover:text-black no-underline p-3 text-base text-font-color text-left w-full'
+      className='block hover:text-black no-underline pr-3 py-3 text-base text-font-color text-left w-full'
     >
       {navigationLink.text}
     </Link>

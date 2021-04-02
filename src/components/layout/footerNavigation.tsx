@@ -13,7 +13,7 @@ const FooterNavigation = (): ReactElement => {
     <li key={navigationItem.href}>
       <Link
         to={navigationItem.href}
-        className='hover:text-black inline-block no-underline p-4 text-base text-font-color'
+        className='hover:text-black inline-block no-underline pr-4 py-4 text-base text-font-color'
       >
         {navigationItem.text}
       </Link>
