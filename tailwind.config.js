@@ -46,6 +46,9 @@ module.exports = {
       textShadow: {
         snapchat: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
       },
+      width: {
+        'staff-card': '22rem',
+      },
     },
   },
   variants: {

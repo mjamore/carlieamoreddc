@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Card from './card';
 
 const MeetTheStaff = (): ReactElement => {
-  const maxWidthClass = 'max-w-sm';
+  const maxWidthClass = 'max-w-sm lg:w-80 xl:w-staff-card';
   const imageClasses = 'my-3 rounded-full shadow-circular-img';
   const imagePlaceholderType = 'blurred';
   const loadingType = 'eager';
