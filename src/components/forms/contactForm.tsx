@@ -24,7 +24,7 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   const inputClasses = 'block border border-gray-400 focus:outline-green p-1 text-sm w-full';
   const textareaClasses = 'block border border-gray-400 focus:outline-green h-20 p-1 resize-y text-sm w-full';
   const requiredFieldClasses = 'ml-0.5 text-red-800 text-xs';
-  const alignmentClass = `${isFormSubmitted ? 'self-start' : ''}`;
+  const alignmentClass = `${isFormSubmitted ? 'md:self-start' : ''}`;
 
   const submitForm = (formData: FormData): void => {
     console.log('formData: ', formData);
