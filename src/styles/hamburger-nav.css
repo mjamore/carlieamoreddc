@@ -22,3 +22,11 @@
 .bm-menu {
   @apply bg-aliceblue px-6 py-10;
 }
+
+/* Update outline styling */
+.bm-burger-button:focus,
+#react-burger-menu-btn:focus,
+#react-burger-cross-btn:focus,
+.bm-item:focus {
+  @apply outline-green;
+}
