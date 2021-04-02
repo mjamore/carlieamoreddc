@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
+import ReactHtmlParser from 'react-html-parser';
 import PageLayout from '../components/layout/pageLayout';
 import aboutMeContent from '../data/aboutMeContent';
 import '../styles/stars.sass';
@@ -8,8 +9,6 @@ import '../styles/stars.sass';
 // Typescript declarations
 interface AboutMeSection {
   title: string;
-  emoji: string;
-  emojiDescription: string;
   text: string;
 }
 
@@ -27,7 +26,7 @@ const IndexPage = (): ReactElement => {
             <h2 className='inline-block mx-2.5'>{aboutMeSection.title}</h2>
           </div>
           <hr />
-          <p className='mb-12 mt-5'>{aboutMeSection.text}</p>
+          <p className='mb-12 mt-5'>{ReactHtmlParser(aboutMeSection.text)}</p>
         </div>
       </div>
     );
