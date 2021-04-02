@@ -1,53 +1,24 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { ReactElement } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
+import PageLayout from '../components/layout/pageLayout';
+import PageHeading from '../components/pageHeading';
 
-// styles
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
-
-// markup
-const NotFoundPage = (): ReactElement => (
-  <main style={pageStyles}>
-    <title>Not found</title>
-    <h1 style={headingStyles}>Page not found</h1>
-    <p style={paragraphStyles}>
-      Sorry{' '}
-      <span role='img' aria-label='Pensive emoji'>
-        😔
-      </span>{' '}
-      we couldn’t find what you were looking for.
-      <br />
-      {process.env.NODE_ENV === 'development' ? (
-        <>
-          <br />
-          Try creating a page in <code style={codeStyles}>src/pages/</code>.
-          <br />
-        </>
-      ) : null}
-      <br />
-      <Link to='/'>Go home</Link>.
-    </p>
-  </main>
+const PageNotFound = (): ReactElement => (
+  <div>
+    <Helmet
+      title='Dr. Carlie Amore, DDS | Doctor of Dental Surgery'
+      meta={[
+        { name: 'description', content: 'The official website of Dr. Carlie Amore, DDS. Dr. Carlie Amore currently practices at Broadmoor Holistic Dentistry in Overland Park, Kansas and specializes in holistic dentistry.' },
+        { name: 'keywords', content: 'holistic dentist, holistic dentistry, dentist in Overland Park' },
+      ]}
+    />
+    <PageLayout>
+      <PageHeading headingText='This Page Could Not be Found' />
+      <p className='my-12'>Please head back to the <Link className='link' to='/'>home page</Link> and use the navigation menu to explore the available pages on this site.</p>
+    </PageLayout>
+  </div>
 );
 
-export default NotFoundPage;
+export default PageNotFound;
