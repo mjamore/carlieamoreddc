@@ -43,11 +43,11 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   };
 
   return (
-    <div className={`max-w-xs w-full ${alignmentClass}`}>
+    <div className={`bg-gray-100 border border-gray-200 p-5 max-w-xs w-full ${alignmentClass}`}>
       {isFormSubmitted
-        ? <p className='mt-12'>Thank you for your reaching out! I will follow up with you shortly.</p>
+        ? <p>Thank you for your reaching out! I will follow up with you shortly.</p>
         : (
-          <form className={`bg-gray-100 border border-gray-200 p-5 text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
+          <form className={`text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
             <h4>Let&apos;s Get in Touch</h4>
             <hr />
             <label className={labelClasses} htmlFor='name'>
