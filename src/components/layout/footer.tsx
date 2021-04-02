@@ -4,9 +4,9 @@ import ContactForm from '../forms/contactForm';
 
 const Footer = (): ReactElement => (
   <footer className='bg-aliceblue py-12 px-5 shadow-container text-center'>
-    <div className='flex flex-col items-center justify-between max-w-page mx-auto md:flex-row md:items-center'>
+    <div className='flex flex-col items-center justify-between max-w-page mx-auto lg:flex-row lg:items-center'>
       <FooterNavigation />
-      <div className='my-12 order-3 md:my-0 md:order-none md:self-end'>
+      <div className='my-12 order-3 lg:my-0 lg:order-none lg:self-end'>
         <a href='https://www.facebook.com/carlie.amore' target='_blank' rel='noreferrer' aria-label="Facebook link to Carlie Amore\'s profile page">
           <i className='fa fa-facebook' />
         </a>

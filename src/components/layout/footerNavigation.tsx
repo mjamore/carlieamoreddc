@@ -21,7 +21,7 @@ const FooterNavigation = (): ReactElement => {
   ));
 
   return (
-    <ul className='list-none max-w-xs mb-9 text-left tracking-tight uppercase w-full md:mb-0'>
+    <ul className='list-none max-w-xs mb-9 text-left tracking-tight uppercase w-full lg:mb-0'>
       {navigationItems}
     </ul>
   );
