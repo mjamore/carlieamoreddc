@@ -43,7 +43,7 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   };
 
   return (
-    <div className={`bg-gray-100 border border-gray-200 p-5 max-w-xs w-full ${alignmentClass}`}>
+    <div className={`bg-gray-100 border border-gray-200 my-8 p-5 max-w-xs w-full ${alignmentClass}`}>
       {isFormSubmitted
         ? <p>Thank you for your reaching out! I will follow up with you shortly.</p>
         : (
