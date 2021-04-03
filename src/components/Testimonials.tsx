@@ -1,7 +1,7 @@
 /* eslint-disable import/order */
 import React, { ReactElement } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import Card from './card';
+import Card from './Card';
 
 // Swiperjs
 import SwiperCore, { Autoplay, Pagination, A11y } from 'swiper';

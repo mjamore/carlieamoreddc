@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-import PageLayout from '../components/layout/pageLayout';
-import PageHeading from '../components/pageHeading';
-import Testimonials from '../components/testimontials';
-import TestimonialsForm from '../components/forms/testimonialForm';
+import PageLayout from '../components/layout/PageLayout';
+import PageHeading from '../components/PageHeading';
+import Testimonials from '../components/Testimonials';
+import TestimonialsForm from '../components/forms/TestimonialForm';
 
 const TestimonialsPage = (): ReactElement => (
   <div>

@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-import PageLayout from '../components/layout/pageLayout';
-import ServicesProvided from '../components/servicesProvided';
-import PageHeading from '../components/pageHeading';
+import PageLayout from '../components/layout/PageLayout';
+import ServicesProvided from '../components/ServicesProvided';
+import PageHeading from '../components/PageHeading';
 
 const ServicesPages = (): ReactElement => (
   <div>

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Link } from 'gatsby';
 import { slide as Menu } from 'react-burger-menu';
-import ContactForm from '../forms/contactForm';
+import ContactForm from '../forms/ContactForm';
 import navigationLinks from '../../data/navigationLinks';
 
 // Typescript declarations

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-import PageLayout from '../components/layout/pageLayout';
-import PageHeading from '../components/pageHeading';
+import PageLayout from '../components/layout/PageLayout';
+import PageHeading from '../components/PageHeading';
 
 const HolisticDentistryPage = (): ReactElement => (
   <div>

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import Card from './card';
+import Card from './Card';
 
 const MeetTheStaff = (): ReactElement => {
   const maxWidthClass = 'max-w-sm lg:w-80 xl:w-staff-card';

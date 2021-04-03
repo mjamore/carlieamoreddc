@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-import PageLayout from '../components/layout/pageLayout';
-import PageHeading from '../components/pageHeading';
-import MeetTheStaff from '../components/meetTheStaff';
+import PageLayout from '../components/layout/PageLayout';
+import PageHeading from '../components/PageHeading';
+import MeetTheStaff from '../components/MeetTheStaff';
 
 const BroadmoorHolisticDentistryPage = (): ReactElement => (
   <div>

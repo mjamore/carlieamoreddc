@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import FooterNavigation from './footerNavigation';
-import ContactForm from '../forms/contactForm';
+import FooterNavigation from './FooterNavigation';
+import ContactForm from '../forms/ContactForm';
 
 const Footer = (): ReactElement => (
   <footer className='bg-aliceblue py-12 shadow-container text-center'>

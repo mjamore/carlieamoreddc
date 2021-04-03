@@ -2,8 +2,8 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
-import PageLayout from '../components/layout/pageLayout';
-import PageHeading from '../components/pageHeading';
+import PageLayout from '../components/layout/PageLayout';
+import PageHeading from '../components/PageHeading';
 
 // Typescript declarations
 interface PageNotFoundProps {

@@ -1,9 +1,9 @@
 import React, { ReactElement, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import HeaderNavigation from './headerNavigation';
-import Header from './header';
-import Footer from './footer';
+import HeaderNavigation from './HeaderNavigation';
+import Header from './Header';
+import Footer from './Footer';
 
 // Typescript declarations
 interface PageLayoutProps {

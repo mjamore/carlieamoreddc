@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import PageLayout from '../components/layout/pageLayout';
+import PageLayout from '../components/layout/PageLayout';
 import '../styles/stars.sass';
 
 // Typescript declarations
