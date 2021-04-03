@@ -1,32 +1,44 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-import { StaticImage } from 'gatsby-plugin-image';
 import ReactHtmlParser from 'react-html-parser';
+import { graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/pageLayout';
-import aboutMeContent from '../data/aboutMeContent';
 import '../styles/stars.sass';
 
 // Typescript declarations
-interface AboutMeSection {
-  title: string;
-  text: string;
+interface IndexPageProps {
+  data: {
+    allContentfulAboutMeSection: {
+      edges: [
+        {
+          node: {
+            title: string;
+            text: {
+              text: string;
+            }
+          }
+        }
+      ]
+    }
+  }
 }
 
-const IndexPage = (): ReactElement => {
-  const AboutMeContent = aboutMeContent.map((aboutMeSection: AboutMeSection, index): ReactElement => {
+const IndexPage = ({ data }: IndexPageProps): ReactElement => {
+  const AboutMeContent = data.allContentfulAboutMeSection.edges.map(({ node }, index): ReactElement => {
     let sectionClasses = '';
     if (index % 2 !== 0) {
       sectionClasses += 'bg-green bg-jagged-image bg-jagged-size bg-left-bottom bg-repeat-x shadow-top';
     }
 
     return (
-      <div key={aboutMeSection.title} className={`p-10 ${sectionClasses}`}>
+      <div key={node.title} className={`p-10 ${sectionClasses}`}>
         <div className='max-w-page mx-auto'>
           <div className='mb-5 text-center text-xl'>
-            <h2 className='inline-block mx-2.5'>{aboutMeSection.title}</h2>
+            <h2 className='inline-block mx-2.5'>{node.title}</h2>
           </div>
           <hr />
-          <p className='mb-12 mt-5'>{ReactHtmlParser(aboutMeSection.text)}</p>
+          <p className='mb-12 mt-5'>{ReactHtmlParser(node.text.text)}</p>
         </div>
       </div>
     );
@@ -72,5 +84,20 @@ const IndexPage = (): ReactElement => {
     </div>
   );
 };
+
+export const query = graphql`
+  {
+    allContentfulAboutMeSection {
+      edges {
+        node {
+          title
+          text {
+            text
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

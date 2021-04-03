@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "59df96e9-de48-4568-8ede-a6b6f2b92859",
+		"name": "carlieamoredds",
+		"description": "API calls to Contentful CMS for carlieamoredds.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://cdn.contentful.com/spaces/{{SPACE_ID}}/environments/master/entries?access_token={{ACCESS_TOKEN}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cdn.contentful.com/spaces/{{SPACE_ID}}/environments/master/entries?access_token={{ACCESS_TOKEN}}",
+					"protocol": "https",
+					"host": [
+						"cdn",
+						"contentful",
+						"com"
+					],
+					"path": [
+						"spaces",
+						"{{SPACE_ID}}",
+						"environments",
+						"master",
+						"entries"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{ACCESS_TOKEN}}"
+						}
+					]
+				},
+				"description": "Get all website data for the carliedamoredds website."
+			},
+			"response": []
+		}
+	]
+}

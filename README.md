@@ -5,21 +5,31 @@ This is the source code for Carlie Amore's dentistry website:
 - https://carlieamoredds.gtsb.io/
 - https://carlieamoredds.netlify.app/
 - carlieamoredds.com
+- carlieamoreholisticdds.com
+- broadmoorholistidentistry.com
 
 ## Run Gatsby Website Locally:
+1. Create a .env file at the root of this project with the following entries:
+    - `MAILGUN_API_KEY`
+    - `EMAIL_T0_ADDRESS`
+    - `CONTENTFUL_SPACE_ID`
+    - `CONTENTFUL_ACCESS_TOKEN`
+    - `GATSBY_CONTENTFUL_OFFLINE=true`
+    - `NODE_ENV=development`.
+The MAILGUN_API_KEY value can be retrieved from https://app.mailgun.com/app/account/security/.  The Contentful CONTENTFUL_SPACE_ID, and CONTENTFUL_ACCESS_TOKEN can be retrieved from https://app.contentful.com/spaces/73jild2dfrc8/api/keys/7oCbo2CeMg1SBkfBB6gcze.
 
-1.  ```shell
+2.  ```shell
     npm install
     ```
 
-2. ```shell
+3. ```shell
     npm start
     ```
 
 ## Workflow for Developing/Deploying/Testing the Netlify Serverless Function:
 In order to send emails to Carlie when the user submits the contact form or the new testimonial form on the website, this application contains two serverless function that are deployed through Netlify and located in the `netlify/functions/` directory - `sendContactFormEmail.js` and `sendNewTestimonialEmail.js`.
 
-1.  Make sure you have a .env file setup at the root of this project that contains an entry for `MAILGUN_API_KEY` and `EMAIL_T0_ADDRESS`. The MAILGUN_API_KEY value can be retrieved from https://app.mailgun.com/app/account/security/api_keys.
+1.  Make sure you have a .env file setup, as described in step 1 under the 'Run Gatsby Website Locally section.
 
 2.  ```shell
     netlify dev
@@ -48,31 +58,10 @@ In order to send emails to Carlie when the user submits the contact form or the 
 ## Deployment:
 Netlify/Gatsby Cloud is used as a continuous build/deployment server, as well as for hosting the site.  The site is automatically built each time the `main` branch is pushed.
 
-## Site requirements:
+## Postman:
+There is Postman collection located at `postman/carlieamoredds.postman_collection.json`, which contains calls to the Contentful API for getting data to power the website.  In order to run the Postman collection, import it into Postman and then create a new environment containing variables for `SPACE_ID` and `ACCESS_TOKEN`, both of which can be obtained from https://app.contentful.com/spaces/73jild2dfrc8/api/keys/7oCbo2CeMg1SBkfBB6gcze.
 
-URL:
-- carlieamoreholisticdds.com
-- carlieamoredds.com
-- broadmoorholistidentistry.com
-
-Pages:
-- Homepage
-- Services
-    - Healthy Start
-    - Holistic/Biological Dentistry
-    - TMJ Treatment
-- About Dr. Julie Babcock
-- Meet the Team
-- Unique First Visit
-- Patient Education
-- Contact Us
-
-Features
-- Ability to submit a contact form
-- Book online?
-- New Patient Exam Form
-
-Influences:
+## Influences:
 - https://www.babcockdentistry.com/
 - https://thevibrantmarket.com/
 - https://www.rejuvdentist.com/
@@ -85,9 +74,20 @@ Influences:
 ## To-Do:
 - Customize SEO metadata to each page
 - Add google analytics
+- Clean up:
+    - Image directory
+    - Fonts directory
 
-Heart tooth logos:
+## Heart tooth logos:
 - https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn2.vectorstock.com%2Fi%2F1000x1000%2F29%2F26%2Fcreative-teeth-heart-inside-logo-vector-22372926.jpg&imgrefurl=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fcreative-teeth-heart-inside-logo-vector-22372926&tbnid=dZggBgS5TD0cGM&vet=12ahUKEwi465uwpdLvAhWGT98KHUAFBekQMygIegUIARDYAQ..i&docid=jSD1itavTYTigM&w=1000&h=780&q=heart%20tooth&ved=2ahUKEwi465uwpdLvAhWGT98KHUAFBekQMygIegUIARDYAQ
 - https://pixlr.com/e/#editor
 
-Stars Codepen: https://codepen.io/saransh/pen/BKJun
+## Stars Codepen: https://codepen.io/saransh/pen/BKJun
+
+## Contentful CMS:
+Organization: Michael Amore
+Spaces: carlieamoredds
+Environments: master
+Content Types: About Me Section
+Content
+- Website data: https://cdn.contentful.com/spaces/{{SPACE_ID}}/environments/master/entries?access_token={{ACCESS_TOKEN}}
