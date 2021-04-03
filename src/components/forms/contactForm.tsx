@@ -47,7 +47,7 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
       {isFormSubmitted
         ? <p>Thank you for your reaching out! I will follow up with you shortly.</p>
         : (
-          <form className={`text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)}>
+          <form className={`text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)} autoComplete='on'>
             <h4>Let&apos;s Get in Touch</h4>
             <hr />
             <label className={labelClasses} htmlFor='name'>

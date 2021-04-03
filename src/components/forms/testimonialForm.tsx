@@ -52,7 +52,7 @@ const TestimonialForm = (): ReactElement => {
       {isFormSubmitted
         ? <p>Thank you for providing your feedback! I will review your submission and consider adding it to the site.</p>
         : (
-          <form className='mx-5 text-font-color text-left md:mx-auto' onSubmit={handleSubmit(submitForm)}>
+          <form className='mx-5 text-font-color text-left md:mx-auto' onSubmit={handleSubmit(submitForm)} autoComplete='on'>
             <h4>Share Your Experience</h4>
             <hr />
             <label className={labelClasses} htmlFor='name'>
