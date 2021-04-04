@@ -1,30 +1,10 @@
 import React, { ReactElement } from 'react';
-import { Link } from 'gatsby';
-import navigationLinks from '../../data/navigationLinks';
+import NavigationItems from './NavigationItems';
 
-// Typescript declarations
-interface NavigationItem {
-  href: string;
-  text: string;
-}
-
-const FooterNavigation = (): ReactElement => {
-  const navigationItems = navigationLinks.map((navigationItem: NavigationItem): ReactElement => (
-    <li key={navigationItem.href}>
-      <Link
-        to={navigationItem.href}
-        className='hover:text-black inline-block no-underline pr-4 py-4 text-base text-font-color'
-      >
-        {navigationItem.text}
-      </Link>
-    </li>
-  ));
-
-  return (
-    <ul className='list-none max-w-xs mb-9 text-left tracking-tight uppercase w-full lg:mb-0'>
-      {navigationItems}
-    </ul>
-  );
-};
+const FooterNavigation = (): ReactElement => (
+  <ul className='list-none max-w-xs mb-9 text-left tracking-tight uppercase w-full lg:mb-0'>
+    <NavigationItems />
+  </ul>
+);
 
 export default FooterNavigation;
