@@ -16,7 +16,8 @@ interface FrequentlyAskedQuestionsPageProps {
             question: string;
             answer: {
               answer: string;
-            }
+            };
+            order: number;
           }
         }
       ]

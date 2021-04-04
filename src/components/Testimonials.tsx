@@ -16,6 +16,7 @@ interface UserTestimonial {
   node: {
     name: string;
     serviceProvided: string;
+    order: number;
     testimonialText: {
       testimonialText: string;
     };
