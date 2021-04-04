@@ -1,21 +1,33 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
+import { graphql } from 'gatsby';
 import PageLayout from '../components/layout/PageLayout';
 import PageHeading from '../components/PageHeading';
-import frequentlyAskedQuestionsData from '../data/frequentlyAskedQuestions';
 import Faq from '../components/FAQ';
 
 // Typescript declarations
-interface FAQ {
-  question: string;
-  answer: string;
+interface FrequentlyAskedQuestionsPageProps {
+  data: {
+    allContentfulFrequentlyAskedQuestion: {
+      edges: [
+        {
+          node: {
+            question: string;
+            answer: {
+              answer: string;
+            }
+          }
+        }
+      ]
+    }
+  }
 }
 
-const EducationPage = (): ReactElement => {
-  const faqs = frequentlyAskedQuestionsData.map((faq: FAQ): ReactElement => (
-    <div key={faq.question}>
-      <Faq question={faq.question} answer={ReactHtmlParser(faq.answer)} />
+const FrequentlyAskedQuestionsPage = ({ data }: FrequentlyAskedQuestionsPageProps): ReactElement => {
+  const faqs = data.allContentfulFrequentlyAskedQuestion.edges.map(({ node }): ReactElement => (
+    <div key={node.question}>
+      <Faq question={node.question} answer={ReactHtmlParser(node.answer.answer)} />
     </div>
   ));
 
@@ -36,4 +48,20 @@ const EducationPage = (): ReactElement => {
   );
 };
 
-export default EducationPage;
+export const query = graphql`
+  query frequentlyAskedQuestion {
+    allContentfulFrequentlyAskedQuestion(sort: { fields: order, order: ASC }) {
+      edges {
+        node {
+          answer {
+            answer
+          }
+          question
+          order
+        }
+      }
+    }
+  }
+`;
+
+export default FrequentlyAskedQuestionsPage;
