@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import React, { ReactElement, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { graphql, useStaticQuery } from 'gatsby';
 import axios from 'axios';
-import servicesProvidedData from '../../data/servicesProvided';
 import RequiredFieldErrorMessage from './RequiredFieldErrorMessage';
 
 // Typescript declarations
@@ -14,8 +14,10 @@ interface FormData {
 }
 
 interface Service {
-  name: string;
-  description: string;
+  node: {
+    name: string;
+    order: number;
+  }
 }
 
 const TestimonialForm = (): ReactElement => {
@@ -43,8 +45,21 @@ const TestimonialForm = (): ReactElement => {
       });
   };
 
-  const serviceOptions = servicesProvidedData.map((service: Service): ReactElement => (
-    <option key={service.name} value={service.name}>{service.name}</option>
+  const servicesProvidedData = useStaticQuery(graphql`
+    query {
+      allContentfulServicesProvided(sort: { fields: order, order: ASC }) {
+        edges {
+          node {
+            order
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const serviceOptions = servicesProvidedData.allContentfulServicesProvided.edges.map(({ node }: Service): ReactElement => (
+    <option key={node.name} value={node.name}>{node.name}</option>
   ));
 
   return (
