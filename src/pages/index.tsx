@@ -16,7 +16,8 @@ interface IndexPageProps {
             title: string;
             text: {
               text: string;
-            }
+            };
+            order: number;
           }
         }
       ]
@@ -87,13 +88,14 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
 
 export const query = graphql`
   {
-    allContentfulAboutMeSection {
+    allContentfulAboutMeSection(sort: { fields: order, order: ASC }) {
       edges {
         node {
           title
           text {
             text
           }
+          order
         }
       }
     }
