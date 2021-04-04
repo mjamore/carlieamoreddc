@@ -33,11 +33,12 @@ const Testimonials = () => {
 
   const data = useStaticQuery(graphql`
     query userTestimonials {
-      allContentfulUserTestimonial {
+      allContentfulUserTestimonial(sort: { fields: order, order: ASC }) {
         edges {
           node {
             name
             serviceProvided
+            order
             testimonialText {
               testimonialText
             }
