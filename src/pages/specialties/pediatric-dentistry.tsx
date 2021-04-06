@@ -1,10 +1,9 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
-import PageLayout from '../components/layout/PageLayout';
-import ServicesProvided from '../components/ServicesProvided';
-import PageHeading from '../components/PageHeading';
+import PageLayout from '../../components/layout/PageLayout';
+import PageHeading from '../../components/PageHeading';
 
-const ServicesPages = (): ReactElement => (
+const EducationPage = (): ReactElement => (
   <div>
     <Helmet
       title='Dr. Carlie Amore, DDS | Doctor of Dental Surgery'
@@ -14,12 +13,9 @@ const ServicesPages = (): ReactElement => (
       ]}
     />
     <PageLayout>
-      <div className='m-12'>
-        <PageHeading headingText='Specialty Services' />
-        <ServicesProvided />
-      </div>
+      <PageHeading headingText='Pediatric Dentistry' />
     </PageLayout>
   </div>
 );
 
-export default ServicesPages;
+export default EducationPage;
