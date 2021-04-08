@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
+import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../../components/layout/PageLayout';
 import PageHeading from '../../components/PageHeading';
 
@@ -14,6 +15,42 @@ const EducationPage = (): ReactElement => (
     />
     <PageLayout>
       <PageHeading headingText='Airway and Tongue Tie' />
+      <StaticImage
+        src='../../images/teeth1.JPG'
+        alt='teeth'
+        placeholder='blurred'
+      />
+      <StaticImage
+        src='../../images/teeth2.JPG'
+        alt='teeth'
+        placeholder='blurred'
+      />
+      <StaticImage
+        src='../../images/teeth3.JPG'
+        alt='teeth'
+        placeholder='blurred'
+      />
+      <StaticImage
+        src='../../images/teeth4.JPG'
+        alt='teeth'
+        placeholder='blurred'
+      />
+      <StaticImage
+        src='../../images/teeth5.JPG'
+        alt='teeth'
+        placeholder='blurred'
+      />
+      <StaticImage
+        src='../../images/teeth6.JPG'
+        alt='teeth'
+        placeholder='blurred'
+      />
+      <iframe
+        title='Airway and TMJ'
+        src='https://www.youtube.com/embed/d5Jy0-8QzTY'
+        width='420'
+        height='315'
+      />
     </PageLayout>
   </div>
 );
