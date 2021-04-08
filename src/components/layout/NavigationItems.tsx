@@ -6,7 +6,7 @@ const NavigationItem = (): ReactElement => {
 
   return (
     <div>
-      <Link to='/' className={linkClasses}>Home</Link>
+      <Link to='//' className={linkClasses}>Home</Link>
       <Link to='/my-education/' className={linkClasses}>My Education</Link>
       <Link to='/specialties/' className={linkClasses}>Specialty Services</Link>
       <div className='ml-7'>

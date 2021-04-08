@@ -55,7 +55,7 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
         ]}
       />
       <PageLayout fullWidth>
-        <div className='flex items-center justify-center overflow-hidden relative fade-in'>
+        <div className='flex items-center justify-center overflow-hidden relative'>
           <div className='w-full'>
             <StaticImage
               src='../images/background-patterns/gradient3.jpg'
@@ -71,7 +71,7 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
           <div id='stars2' />
           <div id='stars3' />
         </div>
-        <div className='text-center m-5 md:my-12 fade-in'>
+        <div className='text-center m-5 md:my-12'>
           <StaticImage
             className='border-4 border-green shadow'
             src='../images/carlie/carlie.webp'
