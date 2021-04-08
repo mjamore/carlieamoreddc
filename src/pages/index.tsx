@@ -33,7 +33,7 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
     }
 
     return (
-      <div key={node.title} className={`p-10 ${sectionClasses}`}>
+      <div key={node.title} className={`p-10 ${sectionClasses}`} data-sal='fade' data-sal-duration='2000'>
         <div className='max-w-page mx-auto'>
           <div className='mb-5 text-center text-xl'>
             <h2 className='inline-block mx-2.5'>{node.title}</h2>
