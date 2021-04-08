@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/PageLayout';
@@ -34,17 +33,15 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
     }
 
     return (
-      <ScrollAnimation animateIn='fade-in' key={node.title}>
-        <div className={`p-10 ${sectionClasses}`}>
-          <div className='max-w-page mx-auto'>
-            <div className='mb-5 text-center text-xl'>
-              <h2 className='inline-block mx-2.5'>{node.title}</h2>
-            </div>
-            <hr />
-            <p className='mb-12 mt-5'>{ReactHtmlParser(node.text.text)}</p>
+      <div key={node.title} className={`p-10 ${sectionClasses}`}>
+        <div className='max-w-page mx-auto'>
+          <div className='mb-5 text-center text-xl'>
+            <h2 className='inline-block mx-2.5'>{node.title}</h2>
           </div>
+          <hr />
+          <p className='mb-12 mt-5'>{ReactHtmlParser(node.text.text)}</p>
         </div>
-      </ScrollAnimation>
+      </div>
     );
   });
 

@@ -1,11 +1,9 @@
 import React, { ReactElement, ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import ScrollAnimation from 'react-animate-on-scroll';
 import HeaderNavigation from './HeaderNavigation';
 import Header from './Header';
 import Footer from './Footer';
-import 'animate.css/animate.min.css';
 
 // Typescript declarations
 interface PageLayoutProps {
@@ -28,9 +26,7 @@ const PageLayout = ({ children, fullWidth }: PageLayoutProps): ReactElement => {
       <div className={classNames}>
         {children}
       </div>
-      <ScrollAnimation animateIn='fade-in'>
-        <Footer />
-      </ScrollAnimation>
+      <Footer />
     </div>
   );
 };
