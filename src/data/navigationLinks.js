@@ -10,7 +10,7 @@ const navigationLinks = [
   {
     text: 'Specialties',
     href: '/specialties/',
-    children: [
+    childLinks: [
       {
         text: 'Ozone Therapy',
         href: '/specialties/ozone-therapy/',

@@ -9,22 +9,18 @@
   @font-face {
     font-family: 'Open Sans Regular';
     src: url('../fonts/OpenSans-Regular.ttf');
-    font-display: swap;
   }
   @font-face {
     font-family: 'Open Sans Light';
     src: url('../fonts/OpenSans-Light.ttf');
-    font-display: swap;
   }
   @font-face {
     font-family: 'Source Sans Light';
     src: url('../fonts/SourceSansPro-ExtraLight.ttf');
-    font-display: swap;
   }
   @font-face {
     font-family: 'Source Sans Regular';
     src: url('../fonts/SourceSansPro-Regular.ttf');
-    font-display: swap;
   }
 }
 
