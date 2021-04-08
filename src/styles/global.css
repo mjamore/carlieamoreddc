@@ -92,3 +92,17 @@ span.swiper-pagination-bullet-active {
 .gatsby-image-wrapper img {
   @apply border-0;
 }
+
+/* animations */
+.fade-in {
+  animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import ReactHtmlParser from 'react-html-parser';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import PageLayout from '../components/layout/PageLayout';
@@ -33,15 +34,17 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
     }
 
     return (
-      <div key={node.title} className={`p-10 ${sectionClasses}`}>
-        <div className='max-w-page mx-auto'>
-          <div className='mb-5 text-center text-xl'>
-            <h2 className='inline-block mx-2.5'>{node.title}</h2>
+      <ScrollAnimation animateIn='fade-in' key={node.title}>
+        <div className={`p-10 ${sectionClasses}`}>
+          <div className='max-w-page mx-auto'>
+            <div className='mb-5 text-center text-xl'>
+              <h2 className='inline-block mx-2.5'>{node.title}</h2>
+            </div>
+            <hr />
+            <p className='mb-12 mt-5'>{ReactHtmlParser(node.text.text)}</p>
           </div>
-          <hr />
-          <p className='mb-12 mt-5'>{ReactHtmlParser(node.text.text)}</p>
         </div>
-      </div>
+      </ScrollAnimation>
     );
   });
 
@@ -55,7 +58,7 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
         ]}
       />
       <PageLayout fullWidth>
-        <div className='flex items-center justify-center overflow-hidden relative'>
+        <div className='flex items-center justify-center overflow-hidden relative fade-in'>
           <div className='w-full'>
             <StaticImage
               src='../images/background-patterns/gradient3.jpg'
@@ -71,7 +74,7 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
           <div id='stars2' />
           <div id='stars3' />
         </div>
-        <div className='text-center m-5 md:my-12'>
+        <div className='text-center m-5 md:my-12 fade-in'>
           <StaticImage
             className='border-4 border-green shadow'
             src='../images/carlie/carlie.webp'
