@@ -65,7 +65,6 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => {
               aspectRatio={21 / 7}
             />
           </div>
-          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           <p className='absolute bg-gray-700 p-4 md:p-8 md:text-3xl rounded-md text-center text-lg text-white z-10'>Doctor of Dental Surgery<br />Specializing in Holistic Dentistry</p>
           <div id='stars' />
           <div id='stars2' />

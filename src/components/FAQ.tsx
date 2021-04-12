@@ -8,10 +8,10 @@ interface FrequentAskedQuestionProps {
 
 const FrequentAskedQuestion = ({ question, answer }: FrequentAskedQuestionProps): ReactElement => (
   <div className='my-12'>
-    <h2 className='my-1'>
+    <h3 className='my-1'>
       <span className='font-black'>Q: </span>
       {question}
-    </h2>
+    </h3>
     <p>
       <span className='font-black'>A: </span>
       {answer}

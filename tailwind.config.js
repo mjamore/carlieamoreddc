@@ -43,11 +43,15 @@ module.exports = {
       outline: {
         green: '2px solid #9bded1',
       },
+      spacing: {
+        iframe: '56.25%',
+      },
       textShadow: {
         snapchat: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
       },
       width: {
         'staff-card': '22rem',
+        500: '500px',
       },
     },
   },

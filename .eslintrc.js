@@ -12,6 +12,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     strict: [2, 'never'],
+    'react/jsx-one-expression-per-line': 0,
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
     'react/react-in-jsx-scope': 2,

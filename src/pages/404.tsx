@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { ReactElement } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';

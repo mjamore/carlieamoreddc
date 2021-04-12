@@ -35,7 +35,7 @@ body {
 }
 
 p {
-  @apply text-xl tracking-wide;
+  @apply text-xl my-5 tracking-wide;
 }
 
 h1 {
