@@ -39,6 +39,7 @@ module.exports = {
       },
       maxWidth: {
         page: '1200px',
+        500: '500px',
       },
       outline: {
         green: '2px solid #9bded1',
@@ -51,7 +52,6 @@ module.exports = {
       },
       width: {
         'staff-card': '22rem',
-        500: '500px',
       },
     },
   },

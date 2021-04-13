@@ -8,7 +8,7 @@ interface PageHeadingProps {
 const PageHeading = ({ headingText }: PageHeadingProps): ReactElement => (
   <div className='text-center'>
     <div className='inline-block'>
-      <h1 className='my-12 page-heading relative text-center'>{headingText}</h1>
+      <h1 className='my-12 page-heading relative text-center md:my-20'>{headingText}</h1>
     </div>
   </div>
 );

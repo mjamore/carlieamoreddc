@@ -3,7 +3,7 @@ import FooterNavigation from './FooterNavigation';
 import ContactForm from '../forms/ContactForm';
 
 const Footer = (): ReactElement => (
-  <footer className='bg-aliceblue py-12 shadow-container text-center'>
+  <footer className='bg-aliceblue mt-20 py-12 shadow-container text-center'>
     <div className='flex flex-col items-center justify-between max-w-page mx-auto px-5 lg:flex-row lg:items-center'>
       <FooterNavigation />
       <div className='my-12 order-3 lg:my-0 lg:order-none lg:self-end'>

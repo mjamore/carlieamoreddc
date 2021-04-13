@@ -7,7 +7,7 @@ interface ResponsiveIframeProps {
 }
 
 const ResponsiveIframe = ({ iframeTitle, iframeUrl }: ResponsiveIframeProps): ReactElement => (
-  <div className='relative overflow-hidden pt-iframe'>
+  <div className='my-12 overflow-hidden pt-iframe relative '>
     <iframe className='absolute h-full left-0 top-0 w-full' src={iframeUrl} title={iframeTitle} />
   </div>
 );

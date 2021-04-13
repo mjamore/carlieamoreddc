@@ -71,6 +71,10 @@ hr {
   @apply font-link-text;
 }
 
+span.link:hover {
+  @apply cursor-pointer;
+}
+
 .page-heading::before {
   content: "";
   position: absolute;
