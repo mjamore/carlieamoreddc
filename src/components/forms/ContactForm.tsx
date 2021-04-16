@@ -2,8 +2,11 @@
 import React, { ReactElement, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
+import Scroll from 'react-scroll';
 import axios from 'axios';
 import RequiredFieldErrorMessage from './RequiredFieldErrorMessage';
+
+const { Element } = Scroll;
 
 // Typescript declarations
 interface ContactFormProps {
@@ -43,35 +46,37 @@ const ContactForm = ({ className }: ContactFormProps): ReactElement => {
   };
 
   return (
-    <div className={`bg-gray-100 border border-gray-200 my-8 p-5 max-w-xs w-full ${alignmentClass}`}>
-      {isFormSubmitted
-        ? <p>Thank you for your reaching out! I will follow up with you shortly.</p>
-        : (
-          <form className={`text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)} autoComplete='on'>
-            <h4>Let&apos;s Get in Touch</h4>
-            <hr />
-            <label className={labelClasses} htmlFor='name'>
-              Name
-              <span className={requiredFieldClasses}>*</span>
-              <input className={inputClasses} type='text' name='name' ref={register({ required: true })} />
-              {errors.name && <RequiredFieldErrorMessage />}
-            </label>
-            <label className={labelClasses} htmlFor='emailAddress'>
-              Email address
-              <span className={requiredFieldClasses}>*</span>
-              <input className={inputClasses} type='email' name='emailAddress' ref={register({ required: true })} />
-              {errors.emailAddress && <RequiredFieldErrorMessage />}
-            </label>
-            <label className={labelClasses} htmlFor='message'>
-              Message
-              <span className={requiredFieldClasses}>*</span>
-              <textarea className={textareaClasses} name='message' ref={register({ required: true })} />
-              {errors.message && <RequiredFieldErrorMessage />}
-            </label>
-            <input className='bg-green border border-gray-400 cursor-pointer mt-3 p-3 w-full' type='submit' value='Submit' />
-          </form>
-        )}
-    </div>
+    <Element name='contact-form'>
+      <div className={`bg-gray-100 border border-gray-200 my-8 p-5 max-w-xs w-full ${alignmentClass}`}>
+        {isFormSubmitted
+          ? <p>Thank you for your reaching out! I will follow up with you shortly.</p>
+          : (
+            <form className={`text-font-color text-left ${className}`} onSubmit={handleSubmit(submitForm)} autoComplete='on'>
+              <h4>Let&apos;s Get in Touch</h4>
+              <hr />
+              <label className={labelClasses} htmlFor='name'>
+                Name
+                <span className={requiredFieldClasses}>*</span>
+                <input className={inputClasses} type='text' name='name' ref={register({ required: true })} />
+                {errors.name && <RequiredFieldErrorMessage />}
+              </label>
+              <label className={labelClasses} htmlFor='emailAddress'>
+                Email address
+                <span className={requiredFieldClasses}>*</span>
+                <input className={inputClasses} type='email' name='emailAddress' ref={register({ required: true })} />
+                {errors.emailAddress && <RequiredFieldErrorMessage />}
+              </label>
+              <label className={labelClasses} htmlFor='message'>
+                Message
+                <span className={requiredFieldClasses}>*</span>
+                <textarea className={textareaClasses} name='message' ref={register({ required: true })} />
+                {errors.message && <RequiredFieldErrorMessage />}
+              </label>
+              <input className='bg-green border border-gray-400 cursor-pointer mt-3 p-3 w-full' type='submit' value='Submit' />
+            </form>
+          )}
+      </div>
+    </Element>
   );
 };
 

@@ -71,6 +71,10 @@ hr {
   @apply font-link-text;
 }
 
+.link:focus {
+  @apply outline-none;
+}
+
 span.link:hover {
   @apply cursor-pointer;
 }
